@@ -5,6 +5,11 @@ CamelBoard ~ The MySQL-less messageboard software.
 
 *Welcome To CamelBoard MessageBoard software!
 
+<a href="/WinterVein/CamelBoard/archive/v1.0.zip" class="minibutton sidebar-button" aria-label="Download WinterVein/CamelBoard as a zip file" title="Download WinterVein/CamelBoard as a zip file" rel="nofollow">
+                  <span class="octicon octicon-cloud-download"></span>
+                  Download ZIP
+                </a>
+                
 Created and Written from scratch by: WinterVein
 credits to: 
 - WinterVein, for creating CamelBoard), 
@@ -57,7 +62,7 @@ the end of the div and press the backspace key on your keyboard.
 
 -To do this, open up replies.html and/or index.html and scroll down to line 52(50 for 
 
-index.html) where it says: <h4>Welcome to CamelBoard comments/home!</h4>  Then just simply 
+index.html) where it says: Welcome to CamelBoard comments/home!  Then just simply 
 
 replace that with your Own Message.
 
