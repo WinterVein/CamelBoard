@@ -1,0 +1,69 @@
+CamelBoard
+==========
+
+CamelBoard ~ The MySQL-less messageboard software.
+
+*Welcome To CamelBoard MessageBoard software!
+
+Created and Written from scratch by: WinterVein
+credits to: 
+- WinterVein, for creating CamelBoard), 
+- Steve Dawson, for writing the password protection PHP script(you can find him at 
+
+http://www.stevedawson.com/)
+- The BootStrap Team(Mdo, Fat, and the rest of their contributers) for writing
+ the BootStrap CSS framework that is utilized by CamelBoard 
+(you can find them at http://getbootstrap.com/)
+
+
+FILES:
+bootstrap-3.1.1-dist (CSS framework folder)
+BlogPoster.php
+homeNS.png
+homeS.png
+logo.png
+process.png
+replies.html
+replypostlist.html
+respondwrite.html
+respscript.php
+
+
+*FOLLOW THE README IN ORDER TO CONFIGURE YOUR MessageBoard!
+
+README:
+
+1. First you need to set your blog password so that only YOU
+can write to the blog. 
+
+-To do this you must Open BlogPoster.php in a text editor
+and change [ $password = "CHANGEME"; ] to [ $password = "your new password here"; ]
+
+2(optional but useful to know)you can delete posts! 
+
+-To do this, open up replypostlist.html(if you want to delete a comment) or 
+blogpostlist.html(if you want to delete a post). and then simply search for the title(or reply
+id) of the post you want to delete, and then highlight that div from the start of the div to 
+
+the end of the div and press the backspace key on your keyboard.
+
+3(optional).You can change the site logo!
+
+-To do this you can simply replace logo.png with your own file(but rename your file to 
+
+"logo.png")
+
+4(optional). change where it says Welcome to CamelBoard Comments! to your own message.
+
+-To do this, open up replies.html and/or index.html and scroll down to line 52(50 for 
+
+index.html) where it says: <h4>Welcome to CamelBoard comments/home!</h4>  Then just simply 
+
+replace that with your Own Message.
+
+5(optional). Change the title of the page.
+- To do this simply open up replies.html and/or index.html and change the text between
+the <title> tags at the top of the page
+
+6(optional). MODIFY ANYTHING YOU WANT! including but not limited to:css style, php scripts,
+background color, and more!
