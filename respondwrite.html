@@ -1,0 +1,36 @@
+<html>
+<head><title>CamelBlog Reply Writer</title><script src="jquery-1.11.0.min.js"></script>
+<link rel="stylesheet" type="text/css" href="bootstrap-3.1.1-dist/css/bootstrap.css" />
+</head>
+<body onload=" ()">
+	 <script type="text/javascript">
+$(function () {
+    var query = document.location.search.replace('?', '');
+    query = query.split('&');
+    for (var i = 0; i < query.length; i++) {
+        var field = query[i].split("=");
+        $("input[name='" + field[0] + "']").val(field[1]);
+    }
+});
+        </script>
+    <form action='respscript.php' method='GET' id="newpost">
+	<font size="1">
+        replyid(copy and paste replyid of the comment you want to reply to): <input type='text' name='replyto' id='replyto'/>
+        <br/><P>
+        title: <input type='text' name='title'/>
+        <br/><P>
+        Date: <input type='date' name='date'/>
+        <br/><P>
+		username: <input type='text' name='uname'/>
+		<br/><P>
+		Image(use full path and if the image is on the web include the http:// prefix) : <input type='text' name='img'/>
+        <br/>
+		
+		comment :<P> <textarea name='comment' form="newpost"></textarea>
+        <br/></font>
+        <input type='submit' value='SUBMIT'/>
+    </form>
+
+	
+</body>
+</html>

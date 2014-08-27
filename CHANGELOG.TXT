@@ -1,0 +1,18 @@
+*Welcome To CamelBoard MessageBoard software!
+   ~The No MySQL MessageBoard software~
+
+Created and Written from scratch by: WinterVein
+credits to: 
+- WinterVein, for creating CamelBoard), 
+- Steve Dawson, for writing the password protection PHP script(you can find him at http://www.stevedawson.com/)
+- The BootStrap Team(Mdo, Fat, and the rest of their contributers) for writing
+ the BootStrap CSS framework that is utilized by CamelBoard 
+(you can find them at http://getbootstrap.com/)
+
+
+CHANGELOG:
+
+v1.0:
+-original release
+
+Planned for future: automating most if not all of the set up process for CamelBoard
