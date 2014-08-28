@@ -4,7 +4,7 @@ CamelBoard
 CamelBoard ~ The MySQL-less messageboard software.
 
 *Welcome To CamelBoard MessageBoard software!
-
+<a class="coinbase-button" data-code="f0a5efbad43a2b52859dfd83c3ccb8c4" data-button-style="donation_small" href="https://coinbase.com/checkouts/f0a5efbad43a2b52859dfd83c3ccb8c4">Donate Bitcoins</a><script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
 <a href="/WinterVein/CamelBoard/archive/v1.0.zip" class="minibutton sidebar-button" aria-label="Download WinterVein/CamelBoard as a zip file" title="Download WinterVein/CamelBoard as a zip file" rel="nofollow">
                   <span class="octicon octicon-cloud-download"></span>
                   Download ZIP
