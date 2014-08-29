@@ -50,7 +50,7 @@ README:
 can write to the blog. 
 
 
--To do this you must Open BlogPoster.php in a text editor
+- To do this you must Open BlogPoster.php in a text editor
 and change '$password ="CHANGEME";' To '$password = "your new password here";'
 THEN, 
 open proccess.php and look again for where it says: '$password = "CHANGEME";' To '$password = "your new password here";'</h5>
