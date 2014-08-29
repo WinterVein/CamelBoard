@@ -5,13 +5,9 @@ CamelBoard ~ The MySQL-less messageboard software.
 
 *Welcome To CamelBoard MessageBoard software!
 
-<a class="coinbase-button" data-code="f6318a7083d08aee766a53b1d757a87e" data-button-style="donation_small" href="https://coinbase.com/checkouts/f6318a7083d08aee766a53b1d757a87e">Donate Bitcoins</a><script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
+Donate Bitcoins if you are feeling generous to :1BButVypoERBMb27hAMmWFK8Jf2XVMDSX1
 
 
-<a href="/WinterVein/CamelBoard/archive/v1.0.zip" class="minibutton sidebar-button" aria-label="Download WinterVein/CamelBoard as a zip file" title="Download WinterVein/CamelBoard as a zip file" rel="nofollow">
-                  <span class="octicon octicon-cloud-download"></span>
-                  Download ZIP
-                </a>
                 
 Created and Written from scratch by: WinterVein
 credits to: 
@@ -45,13 +41,15 @@ IMPORTANT:
 
 README:
 
-1. First you need to set your blog password so that only YOU
+1(VERY VERY IMPORTANT!!!!). First you need to set your blog password so that only YOU
 can write to the blog. 
 
 -To do this you must Open BlogPoster.php in a text editor
-and change [ $password = "CHANGEME"; ] to [ $password = "your new password here"; ]
+and change '$password ="CHANGEME";' To '$password = "your new password here";'
+THEN, 
+open proccess.php and look again for where it says: '$password = "CHANGEME";' To '$password = "your new password here";'
 
-2(optional but useful to know)you can delete posts! 
+2(optional BUT useful to know)you can delete posts! 
 
 -To do this, open up replypostlist.html(if you want to delete a comment) or 
 blogpostlist.html(if you want to delete a post). and then simply search for the title(or reply

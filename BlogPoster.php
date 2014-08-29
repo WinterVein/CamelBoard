@@ -10,9 +10,12 @@
 /* but please leave this header intact, thanks                          */
 /************************************************************************/
 ##########################################################################
-$password = "CHANGEME";  // CHANGE THIS TO WHATEVER YOU WANT!
+$password = "CHANGEME";  //(CaSe-SeNsItIvE!) CHANGE THIS TO WHATEVER YOU WANT OR ELSE YOU WILL BE HACKED!!!
 ##########################################################################
 ?>
+<head>
+<link rel="stylesheet" type="text/css" href="bootstrap-3.1.1-dist/css/bootstrap.css" />
+</head>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
