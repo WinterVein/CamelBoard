@@ -1,13 +1,13 @@
 CamelBoard
 ==========
-
+* SCROLL DOWN *
 CamelBoard ~ The MySQL-less messageboard software.
 
 *Welcome To CamelBoard MessageBoard software!
 
 <a class="coinbase-button" data-code="f6318a7083d08aee766a53b1d757a87e" data-button-style="donation_small" href="https://coinbase.com/checkouts/f6318a7083d08aee766a53b1d757a87e">Donate Bitcoins</a><script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
 
-<h1>or Donate BitCoins to this address if you are feeling generous:1BButVypoERBMb27hAMmWFK8Jf2XVMDSX1</h1>
+<h6>or Donate BitCoins to this address if you are feeling generous:1BButVypoERBMb27hAMmWFK8Jf2XVMDSX1</h6>
 
 <a href="/WinterVein/CamelBoard/archive/v1.0.zip" class="minibutton sidebar-button" aria-label="Download WinterVein/CamelBoard as a zip file" title="Download WinterVein/CamelBoard as a zip file" rel="nofollow">
                   <span class="octicon octicon-cloud-download"></span>
@@ -46,13 +46,13 @@ IMPORTANT:
 
 README:
 
-<h1>1(VERY VERY IMPORTANT!!!!). First you need to set your blog password so that only YOU
+<h6>1(VERY VERY IMPORTANT!!!!). First you need to set your blog password so that only YOU
 can write to the blog. 
 
 -To do this you must Open BlogPoster.php in a text editor
 and change '$password ="CHANGEME";' To '$password = "your new password here";'
 THEN, 
-open proccess.php and look again for where it says: '$password = "CHANGEME";' To '$password = "your new password here";'</h1>
+open proccess.php and look again for where it says: '$password = "CHANGEME";' To '$password = "your new password here";'</h6>
 (there is mandatory two step authentication to prevent LFI attacks)
 
 2(optional but useful to know)you can delete posts! 
