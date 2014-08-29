@@ -58,7 +58,9 @@ if (isset($_POST["password"]) && ($_POST["password"]=="$password")) {
 
 <!-- END OF HIDDEN HTML -->
 <?php 
+
 }
+
 else
 {
 // Wrong password or no password entered display this message
