@@ -23,6 +23,9 @@ http://www.stevedawson.com/)
  the BootStrap CSS framework that is utilized by CamelBoard 
 (you can find them at http://getbootstrap.com/)
 
+NOTE: 
+- Admin blog posts(BlogPoster.php) can involve html, php, css, and javascript (this is so that you can style your posts).
+- Things posted to the messageboard (respondwrite.html) do not allow use of code(this is for saftey reasons). 
 
 FILES:
 bootstrap-3.1.1-dist (CSS framework folder)
@@ -37,6 +40,7 @@ respondwrite.html
 respscript.php
 
 
+IMPORTANT:
 *FOLLOW THE README IN ORDER TO CONFIGURE YOUR MessageBoard!
 
 README:
