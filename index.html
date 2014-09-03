@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Camelboard : CamelBoard ~ The MySQL-less messageboard software.">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Camelboard</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/WinterVein/CamelBoard">View on GitHub</a>
+
+          <h1 id="project_title">Camelboard</h1>
+          <h2 id="project_tagline">CamelBoard ~ The MySQL-less messageboard software.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/WinterVein/CamelBoard/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/WinterVein/CamelBoard/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="camelboard" class="anchor" href="#camelboard"><span class="octicon octicon-link"></span></a>CamelBoard</h1>
+
+<ul>
+<li>SCROLL DOWN *</li>
+</ul><p>CamelBoard ~ The MySQL-less messageboard software.</p>
+
+<p>*Welcome To CamelBoard MessageBoard software!</p>
+
+<p><a href="https://coinbase.com/checkouts/f6318a7083d08aee766a53b1d757a87e">Donate Bitcoins</a></p>
+
+<h5>
+<a name="or-donate-bitcoins-to-this-address-if-you-are-feeling-generous1bbutvypoerbmb27hammwfk8jf2xvmdsx1" class="anchor" href="#or-donate-bitcoins-to-this-address-if-you-are-feeling-generous1bbutvypoerbmb27hammwfk8jf2xvmdsx1"><span class="octicon octicon-link"></span></a>or Donate BitCoins to this address if you are feeling generous:1BButVypoERBMb27hAMmWFK8Jf2XVMDSX1</h5>
+
+<p><a href="/WinterVein/CamelBoard/archive/v1.0.zip" title="Download WinterVein/CamelBoard as a zip file">
+                  
+                  Download ZIP
+                </a></p>
+
+<p>Created and Written from scratch by: WinterVein
+credits to: </p>
+
+<ul>
+<li>WinterVein, for creating CamelBoard), </li>
+<li>Steve Dawson, for writing the password protection PHP script(you can find him at </li>
+</ul><p><a href="http://www.stevedawson.com/">http://www.stevedawson.com/</a>)</p>
+
+<ul>
+<li>The BootStrap Team(Mdo, Fat, and the rest of their contributers) for writing
+the BootStrap CSS framework that is utilized by CamelBoard 
+(you can find them at <a href="http://getbootstrap.com/">http://getbootstrap.com/</a>)</li>
+</ul><p>NOTE: </p>
+
+<ul>
+<li>Admin blog posts(BlogPoster.php) can involve html, php, css, and javascript (this is so that you can style your posts).</li>
+<li>Things posted to the messageboard (respondwrite.html) do not allow use of code(this is for saftey reasons). </li>
+</ul><p>FILES:
+bootstrap-3.1.1-dist (CSS framework folder)
+BlogPoster.php
+homeNS.png
+homeS.png
+logo.png
+process.php
+replies.html
+replypostlist.html
+respondwrite.html
+respscript.php</p>
+
+<p>IMPORTANT:
+*FOLLOW THE README IN ORDER TO CONFIGURE YOUR MessageBoard!</p>
+
+<p>README:</p>
+
+<h5>
+<a name="1very-very-important-first-you-need-to-set-your-blog-password-so-that-only-youcan-write-to-the-blog---to-do-this-you-must-open-blogposterphp-in-a-text-editorand-change-password-changeme-to-password--your-new-password-herethen-open-proccessphp-and-look-again-for-where-it-says-password--changeme-to-password--your-new-password-here" class="anchor" href="#1very-very-important-first-you-need-to-set-your-blog-password-so-that-only-youcan-write-to-the-blog---to-do-this-you-must-open-blogposterphp-in-a-text-editorand-change-password-changeme-to-password--your-new-password-herethen-open-proccessphp-and-look-again-for-where-it-says-password--changeme-to-password--your-new-password-here"><span class="octicon octicon-link"></span></a>1(VERY VERY IMPORTANT!!!!). First you need to set your blog password so that only YOU
+can write to the blog. 
+
+- To do this you must Open BlogPoster.php in a text editor
+and change '$password ="CHANGEME";' To '$password = "your new password here";'
+THEN, 
+open proccess.php and look again for where it says: '$password = "CHANGEME";' To '$password = "your new password here";'</h5>
+
+<p>(there is mandatory two step authentication to prevent LFI attacks)</p>
+
+<p>2(optional but useful to know)you can delete posts! </p>
+
+<p>-To do this, open up replypostlist.html(if you want to delete a comment) or 
+blogpostlist.html(if you want to delete a post). and then simply search for the title(or reply
+id) of the post you want to delete, and then highlight that div from the start of the div to </p>
+
+<p>the end of the div and press the backspace key on your keyboard.</p>
+
+<p>3(optional).You can change the site logo!</p>
+
+<p>-To do this you can simply replace logo.png with your own file(but rename your file to </p>
+
+<p>"logo.png")</p>
+
+<p>4(optional). change where it says Welcome to CamelBoard Comments! to your own message.</p>
+
+<p>-To do this, open up replies.html and/or index.html and scroll down to line 52(50 for </p>
+
+<p>index.html) where it says: Welcome to CamelBoard comments/home!  Then just simply </p>
+
+<p>replace that with your Own Message.</p>
+
+<p>5(optional). Change the title of the page.</p>
+
+<ul>
+<li>To do this simply open up replies.html and/or index.html and change the text between
+the  tags at the top of the page</li>
+</ul><p>6(optional). Change the timezone for dates and times.
+-To do this, Open up process.php(goto line 37) and/or respscript.php(goto line 2), and replace
+where it says "UTC", with whatever your timezone code is, 
+Find list of PHP compatible timezones here: <a href="http://php.net/manual/en/timezones.php">http://php.net/manual/en/timezones.php</a></p>
+
+<p>7(optional). MODIFY ANYTHING YOU WANT! including but not limited to:css style, php scripts,
+background color, and more!</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Camelboard maintained by <a href="https://github.com/WinterVein">WinterVein</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
