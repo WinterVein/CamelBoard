@@ -35,7 +35,7 @@ BlogPoster.php
 homeNS.png
 homeS.png
 logo.png
-process.png
+process.php
 replies.html
 replypostlist.html
 respondwrite.html
@@ -49,7 +49,6 @@ README:
 
 <h5>1(VERY VERY IMPORTANT!!!!). First you need to set your blog password so that only YOU
 can write to the blog. 
-
 
 - To do this you must Open BlogPoster.php in a text editor
 and change '$password ="CHANGEME";' To '$password = "your new password here";'
@@ -83,5 +82,10 @@ replace that with your Own Message.
 - To do this simply open up replies.html and/or index.html and change the text between
 the <title> tags at the top of the page
 
-6(optional). MODIFY ANYTHING YOU WANT! including but not limited to:css style, php scripts,
+6(optional). Change the timezone for dates and times.
+-To do this, Open up process.php(goto line 37) and/or respscript.php(goto line 2), and replace
+where it says "UTC", with whatever your timezone code is, 
+Find list of PHP compatible timezones here: http://php.net/manual/en/timezones.php
+
+7(optional). MODIFY ANYTHING YOU WANT! including but not limited to:css style, php scripts,
 background color, and more!

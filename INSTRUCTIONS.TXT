@@ -29,7 +29,7 @@ BlogPoster.php
 homeNS.png
 homeS.png
 logo.png
-process.png
+process.php
 replies.html
 replypostlist.html
 respondwrite.html
@@ -59,9 +59,7 @@ the end of the div and press the backspace key on your keyboard.
 
 3(optional).You can change the site logo!
 
--To do this you can simply replace logo.png with your own file(but rename your file to 
-
-"logo.png")
+-To do this you can simply replace logo.png with your own file(but rename your file to "logo.png")
 
 4(optional). change where it says Welcome to CamelBoard Comments! to your own message.
 
@@ -75,6 +73,11 @@ replace that with your Own Message.
 - To do this simply open up replies.html and/or index.html and change the text between
 the <title> tags at the top of the page
 
-6(optional). MODIFY ANYTHING YOU WANT! including but not limited to:css style, php scripts,
+6(optional). Change the timezone for dates and times.
+-To do this, Open up process.php(goto line 37) and/or respscript.php(goto line 2), and replace
+where it says "UTC", with whatever your timezone code is, 
+Find list of PHP compatible timezones here: http://php.net/manual/en/timezones.php
+
+7(optional). MODIFY ANYTHING YOU WANT! including but not limited to:css style, php scripts,
 background color, and more!
 

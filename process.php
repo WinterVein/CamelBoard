@@ -34,7 +34,8 @@ TD { FONT-SIZE: 8pt; COLOR: #000000; FONT-FAMILY: Verdana, Tahoma, Arial}
 // If password is valid let the user get access
 if (isset($_POST["password"]) && ($_POST["password"]=="$password")) {
 $title = $_GET['title'];
-$date = $_GET['date'];
+date_default_timezone_set('UTC'); // You can Change this to your timezone if you want find list of timezones here:http://php.net/manual/en/timezones.php
+$date = date('Y-m-d H:i:s');
 $meta = "<P><div><pre>";
 $metae = "</div></pre></P>";
 $img = $_GET['img'];

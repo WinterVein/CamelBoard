@@ -45,8 +45,6 @@ if (isset($_POST["password"]) && ($_POST["password"]=="$password")) {
     <form action='process.php' method='GET' id="newpost">
         Title: <input type='text' name='title'/>
         <br/>
-        Date: <input type='date' name='date'/>
-        <br/>
 		Image(use full path and if the image is on the web include the http:// prefix) : <input type='text' name='img'/>
         <br/>
 		

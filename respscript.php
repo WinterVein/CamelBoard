@@ -1,5 +1,8 @@
+<head>
+<link rel="stylesheet" type="text/css" href="bootstrap-3.1.1-dist/css/bootstrap.css" />
+</head>
 <?php
-date_default_timezone_set('Africa/Nairobi');
+date_default_timezone_set('UTC'); // You can Change this to your timezone if you want find list of timezones here:http://php.net/manual/en/timezones.php
 $date = date('Y-m-d H:i:s');
 $title = $_GET['title'];
 $retitle = $_GET['replyto'];
