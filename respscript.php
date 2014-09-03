@@ -1,5 +1,6 @@
 <?php
-$date = $_GET['date'];
+date_default_timezone_set('Africa/Nairobi');
+$date = date('Y-m-d H:i:s');
 $title = $_GET['title'];
 $retitle = $_GET['replyto'];
 $uname = $_GET['uname'];
