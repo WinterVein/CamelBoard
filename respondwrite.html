@@ -13,18 +13,33 @@ $(function () {
     }
 });
         </script>
+		<script language="javascript" type="text/javascript">
+function limitText(limitField, limitCount, limitNum) {
+	if (limitField.value.length > limitNum) {
+		limitField.value = limitField.value.substring(0, limitNum);
+	} else {
+		limitCount.value = limitNum - limitField.value.length;
+	}
+}
+</script>
     <form action='respscript.php' method='GET' id="newpost">
 	<font size="1">
         replyid(copy and paste replyid of the comment you want to reply to): <input type='text' name='replyto' id='replyto'/>
         <br/><P>
-        title: <input type='text' name='title'/>
+        title(maxlength:50): <input type='text' name='title' onKeyDown="limitText(this.form.title,this.form.countdown,50);" 
+onKeyUp="limitText(this.form.title,this.form.countdown,50);" maxlength="50"/>
         <br/><P>
-		username: <input type='text' name='uname'/>
+		username(maxlength:20): <input type='text' name='uname' onKeyDown="limitText(this.form.uname,this.form.countdown,20);" 
+onKeyUp="limitText(this.form.uname,this.form.countdown,20);" maxlength="20"/>
+
 		<br/><P>
 		Image(use full path and if the image is on the web include the http:// prefix) : <input type='text' name='img'/>
         <br/>
 		
-		comment :<P> <textarea name='comment' form="newpost"></textarea>
+		comment(maxlength:1000) :<P> <textarea name='comment' form="newpost" onKeyDown="limitText(this.form.comment,this.form.countdown,1000);" 
+onKeyUp="limitText(this.form.comment,this.form.countdown,1000);"></textarea>
+        <br/>
+		are you human? <img src="2p2.png" width="20%" height="15%"/><input type='text' name='captcha'/>
         <br/></font>
         <input type='submit' value='SUBMIT'/>
     </form>

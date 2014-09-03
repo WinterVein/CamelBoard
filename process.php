@@ -43,7 +43,7 @@ $comment = $_GET['comment'];
 
 $file_handle = fopen("blogpostlist.html", "r+");
 $old_content = file_get_contents("blogpostlist.html");
-$file_contents = $meta . "Title:" . $title . "     " . "Date:" . $date . " <P><img src=\"" . $img . "\"><P>" . "<P> comment:" . $comment . $metae . $old_content;
+$file_contents = $meta . "Title:<font size=\"3\">" . $title . "</font><P>     " . "Date:" . $date . " <P><img src=\"" . $img . "\"><P>" . "<P> comment:<P>" . $comment . $metae . $old_content;
 
 fwrite($file_handle, $file_contents);
 fclose($file_handle);
