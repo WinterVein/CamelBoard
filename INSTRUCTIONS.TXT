@@ -39,7 +39,8 @@ setuppass.php
 setuptime.php
 pass.php
 timezone.php
-
+msgboardNS.png
+msgboardS.png
 
 IMPORTANT:
 *FOLLOW THE README IN ORDER TO CONFIGURE YOUR MessageBoard!

@@ -45,6 +45,8 @@ setuppass.php
 setuptime.php
 pass.php
 timezone.php
+msgboardNS.png
+msgboardS.png
 
 
 IMPORTANT:
