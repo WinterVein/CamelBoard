@@ -2,7 +2,7 @@
 <link rel="stylesheet" type="text/css" href="bootstrap-3.1.1-dist/css/bootstrap.css" />
 </head>
 <?php
-date_default_timezone_set('UTC'); // You can Change this to your timezone if you want find list of timezones here:http://php.net/manual/en/timezones.php
+require("timezone.php"); // You can Change this to your timezone if you want find list of timezones here:http://php.net/manual/en/timezones.php
 $date = date('Y-m-d H:i:s');
 $captcha = $_GET['captcha'];
 $title = $_GET['title'];
@@ -10,10 +10,10 @@ $retitle = $_GET['replyto'];
 $uname = $_GET['uname'];
 $img = $_GET['img'];
 $comment = $_GET['comment'];
-$fixdate = strip_tags($date);
-$fixed = strip_tags($uname);
-$fixtitle = strip_tags($retitle);
-$safetitle = strip_tags($title); 
+$fixdate = htmlentities($date);
+$fixed = htmlentities($uname);
+$fixtitle = htmlentities($retitle);
+$safetitle = htmlentities($title); 
 $fixcomment = htmlentities($comment);
 $fiximg = htmlentities($img);
 $meta = "<P><div id=\"" . $fixed . $safetitle . $fixdate ."\"><pre>";
@@ -46,7 +46,7 @@ $old_content = file_get_contents("replypostlist.html");
 
 
 
-$file_contents =  $meta . "title:<font size=\"3\">" . $safetitle . "</font><P>username:<font size=\"3\">" . $fixed . "</font><p>replyid:" . $fixed . $safetitle . $fixdate . "<P>Date:" . $fixdate . " <P><img src=\"" . $fiximg . "\"><P>" . "<P> comment:<P>" . $fixcomment . "<P><a href=\"#" . $fixtitle . "\">In response to:". $fixtitle ."</a>" . $metae . $old_content;
+$file_contents =  $meta . "title:<font size=\"3\">" . $safetitle . "</font><P>username:<font size=\"3\">" . $fixed .  "</font><P>Date:" . $fixdate . "<p>replyid:" . $fixed . $safetitle . $fixdate . " <P><img src=\"" . $fiximg . "\"><P>" . "<P> comment:<P>" . $fixcomment . "<P><a href=\"#" . $fixtitle . "\">In response to:". $fixtitle ."</a>" . $metae ."\n". $old_content;
 
 
 fwrite($file_handle, $file_contents);

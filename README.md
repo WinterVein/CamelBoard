@@ -10,7 +10,7 @@ CamelBoard ~ The MySQL-less messageboard software.
 
 <h5>or Donate BitCoins to this address if you are feeling generous:1BButVypoERBMb27hAMmWFK8Jf2XVMDSX1</h5>
 
-<a href="/WinterVein/CamelBoard/archive/v1.0.zip" class="minibutton sidebar-button" aria-label="Download WinterVein/CamelBoard as a zip file" title="Download WinterVein/CamelBoard as a zip file" rel="nofollow">
+<a href="https://github.com/WinterVein/CamelBoard/zipball/master" class="minibutton sidebar-button" aria-label="Download WinterVein/CamelBoard as a zip file" title="Download WinterVein/CamelBoard as a zip file" rel="nofollow">
                   <span class="octicon octicon-cloud-download"></span>
                   Download ZIP
                 </a>
@@ -40,6 +40,11 @@ replies.html
 replypostlist.html
 respondwrite.html
 respscript.php
+config.php
+setuppass.php
+setuptime.php
+pass.php
+timezone.php
 
 
 IMPORTANT:
@@ -47,14 +52,9 @@ IMPORTANT:
 
 README:
 
-<h5>1(VERY VERY IMPORTANT!!!!). First you need to set your blog password so that only YOU
-can write to the blog. 
+<h5>1(VERY VERY IMPORTANT!!!!). First you need to set up your blog!
 
-- To do this you must Open BlogPoster.php in a text editor
-and change '$password ="CHANGEME";' To '$password = "your new password here";'
-THEN, 
-open proccess.php and look again for where it says: '$password = "CHANGEME";' To '$password = "your new password here";'</h5>
-(there is mandatory two step authentication to prevent LFI attacks)
+- To do this you must visit yoursitename.com/config.php in yourbrowser and follow the instructions listed there.
 
 2(optional but useful to know)you can delete posts! 
 
@@ -82,10 +82,5 @@ replace that with your Own Message.
 - To do this simply open up replies.html and/or index.html and change the text between
 the <title> tags at the top of the page
 
-6(optional). Change the timezone for dates and times.
--To do this, Open up process.php(goto line 37) and/or respscript.php(goto line 2), and replace
-where it says "UTC", with whatever your timezone code is, 
-Find list of PHP compatible timezones here: http://php.net/manual/en/timezones.php
-
-7(optional). MODIFY ANYTHING YOU WANT! including but not limited to:css style, php scripts,
+6(optional). MODIFY ANYTHING YOU WANT! including but not limited to:css style, php scripts,
 background color, and more!

@@ -10,7 +10,8 @@
 /* but please leave this header intact, thanks                          */
 /************************************************************************/
 ##########################################################################
-$password = "CHANGEME";  //(CaSe-SeNsItIvE!) CHANGE THIS TO WHATEVER YOU WANT OR ELSE YOU WILL BE HACKED!!!
+require("pass.php");
+$password = $passwerd;
 ##########################################################################
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -34,7 +35,7 @@ TD { FONT-SIZE: 8pt; COLOR: #000000; FONT-FAMILY: Verdana, Tahoma, Arial}
 // If password is valid let the user get access
 if (isset($_POST["password"]) && ($_POST["password"]=="$password")) {
 $title = $_GET['title'];
-date_default_timezone_set('UTC'); // You can Change this to your timezone if you want find list of timezones here:http://php.net/manual/en/timezones.php
+require("timezone.php"); // You can Change this to your timezone if you want find list of timezones here:http://php.net/manual/en/timezones.php
 $date = date('Y-m-d H:i:s');
 $meta = "<P><div><pre>";
 $metae = "</div></pre></P>";
@@ -43,7 +44,7 @@ $comment = $_GET['comment'];
 
 $file_handle = fopen("blogpostlist.html", "r+");
 $old_content = file_get_contents("blogpostlist.html");
-$file_contents = $meta . "Title:<font size=\"3\">" . $title . "</font><P>     " . "Date:" . $date . " <P><img src=\"" . $img . "\"><P>" . "<P> comment:<P>" . $comment . $metae . $old_content;
+$file_contents = $meta . "Title:<font size=\"3\">" . $title . "</font><P>     " . "Date:" . $date . " <P><img src=\"" . $img . "\"><P>" . "<P> comment:<P>" . $comment . $metae . "\n" . $old_content;
 
 fwrite($file_handle, $file_contents);
 fclose($file_handle);

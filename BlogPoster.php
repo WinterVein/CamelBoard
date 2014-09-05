@@ -10,7 +10,9 @@
 /* but please leave this header intact, thanks                          */
 /************************************************************************/
 ##########################################################################
-$password = "CHANGEME";  //(CaSe-SeNsItIvE!) CHANGE THIS TO WHATEVER YOU WANT OR ELSE YOU WILL BE HACKED!!!
+require("pass.php");
+$password = $passwerd;  //(CaSe-SeNsItIvE!) CHANGE THIS TO WHATEVER YOU WANT OR ELSE YOU WILL BE HACKED!!!
+
 ##########################################################################
 ?>
 <head>
@@ -29,9 +31,10 @@ TD { FONT-SIZE: 8pt; COLOR: #000000; FONT-FAMILY: Verdana, Tahoma, Arial}
 </style>
 </head>
 <body>
-<?php 
+<?php
   print "<h2 align=\"center\">Restricted Area!</h2>";
 // If password is valid let the user get access
+
 if (isset($_POST["password"]) && ($_POST["password"]=="$password")) {
 ?>
 <!-- START OF HIDDEN HTML - PLACE YOUR CONTENT HERE -->
