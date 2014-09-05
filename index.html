@@ -1,38 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <title>Camelboard by WinterVein</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-    <title>Camelboard by WinterVein</title>
   </head>
-
   <body>
-    <header>
-      <div class="inner">
+    <div class="wrapper">
+      <header>
         <h1>Camelboard</h1>
-        <h2>CamelBoard ~ The MySQL-less messageboard software.</h2>
-        <a href="https://github.com/WinterVein/CamelBoard" class="button"><small>View project on</small>GitHub</a>
-      </div>
-    </header>
-
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h1>
+        <p>CamelBoard ~ The MySQL-less messageboard software.</p>
+        <p class="view"><a href="https://github.com/WinterVein/CamelBoard">View the Project on GitHub <small>WinterVein/CamelBoard</small></a></p>
+        <ul>
+          <li><a href="https://github.com/WinterVein/CamelBoard/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/WinterVein/CamelBoard/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/WinterVein/CamelBoard">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
 <a name="camelboard" class="anchor" href="#camelboard"><span class="octicon octicon-link"></span></a>CamelBoard</h1>
 
 <ul>
-<li>SCROLL DOWN THIS IS IMPORTANT!!!! *</li>
+<li>SCROLL DOWN *</li>
 </ul><p>CamelBoard ~ The MySQL-less messageboard software.</p>
 
 <p>*Welcome To CamelBoard MessageBoard software!</p>
@@ -42,7 +41,7 @@
 <h5>
 <a name="or-donate-bitcoins-to-this-address-if-you-are-feeling-generous1bbutvypoerbmb27hammwfk8jf2xvmdsx1" class="anchor" href="#or-donate-bitcoins-to-this-address-if-you-are-feeling-generous1bbutvypoerbmb27hammwfk8jf2xvmdsx1"><span class="octicon octicon-link"></span></a>or Donate BitCoins to this address if you are feeling generous:1BButVypoERBMb27hAMmWFK8Jf2XVMDSX1</h5>
 
-<p><a href="/WinterVein/CamelBoard/archive/v1.0.zip" title="Download WinterVein/CamelBoard as a zip file">
+<p><a href="https://github.com/WinterVein/CamelBoard/zipball/master" title="Download WinterVein/CamelBoard as a zip file">
                   
                   Download ZIP
                 </a></p>
@@ -74,25 +73,25 @@ process.php
 replies.html
 replypostlist.html
 respondwrite.html
-respscript.php</p>
+respscript.php
+config.php
+setuppass.php
+setuptime.php
+pass.php
+timezone.php</p>
 
 <p>IMPORTANT:
 *FOLLOW THE README IN ORDER TO CONFIGURE YOUR MessageBoard!</p>
 
 <p>README:</p>
 
-<h5>
-<a name="1very-very-important-first-you-need-to-set-your-blog-password-so-that-only-youcan-write-to-the-blog---to-do-this-you-must-open-blogposterphp-in-a-text-editorand-change-password-changeme-to-password--your-new-password-herethen-open-proccessphp-and-look-again-for-where-it-says-password--changeme-to-password--your-new-password-here" class="anchor" href="#1very-very-important-first-you-need-to-set-your-blog-password-so-that-only-youcan-write-to-the-blog---to-do-this-you-must-open-blogposterphp-in-a-text-editorand-change-password-changeme-to-password--your-new-password-herethen-open-proccessphp-and-look-again-for-where-it-says-password--changeme-to-password--your-new-password-here"><span class="octicon octicon-link"></span></a>1(VERY VERY IMPORTANT!!!!). First you need to set your blog password so that only YOU
-can write to the blog. 
+<p></p><h5>
+<a name="1very-very-important-first-you-need-to-set-up-your-blogto-do-this-you-must-visit-yoursitenamecomconfigphp-in-yourbrowser-and-follow-the-instructions-listed-there" class="anchor" href="#1very-very-important-first-you-need-to-set-up-your-blogto-do-this-you-must-visit-yoursitenamecomconfigphp-in-yourbrowser-and-follow-the-instructions-listed-there"><span class="octicon octicon-link"></span></a>1(VERY VERY IMPORTANT!!!!). First you need to set up your blog!
 
-- To do this you must Open BlogPoster.php in a text editor
-and change '$password ="CHANGEME";' To '$password = "your new password here";'
-THEN, 
-open proccess.php and look again for where it says: '$password = "CHANGEME";' To '$password = "your new password here";'</h5>
-
-<p>(there is mandatory two step authentication to prevent LFI attacks)</p>
-
-<p>2(optional but useful to know)you can delete posts! </p>
+<ul>
+<li>To do this you must visit yoursitename.com/config.php in yourbrowser and follow the instructions listed there.</li>
+</ul>
+</h5><p>2(optional but useful to know)you can delete posts! </p>
 
 <p>-To do this, open up replypostlist.html(if you want to delete a comment) or 
 blogpostlist.html(if you want to delete a post). and then simply search for the title(or reply
@@ -119,32 +118,15 @@ id) of the post you want to delete, and then highlight that div from the start o
 <ul>
 <li>To do this simply open up replies.html and/or index.html and change the text between
 the  tags at the top of the page</li>
-</ul><p>6(optional). Change the timezone for dates and times.
--To do this, Open up process.php(goto line 37) and/or respscript.php(goto line 2), and replace
-where it says "UTC", with whatever your timezone code is, 
-Find list of PHP compatible timezones here: <a href="http://php.net/manual/en/timezones.php">http://php.net/manual/en/timezones.php</a></p>
-
-<p>7(optional). MODIFY ANYTHING YOU WANT! including but not limited to:css style, php scripts,
+</ul><p>6(optional). MODIFY ANYTHING YOU WANT! including but not limited to:css style, php scripts,
 background color, and more!</p>
-        </section>
-
-        <aside id="sidebar">
-          <a href="https://github.com/WinterVein/CamelBoard/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/WinterVein/CamelBoard/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/WinterVein/CamelBoard"></a> is maintained by <a href="https://github.com/WinterVein">WinterVein</a>.</p>
-
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
+      </section>
     </div>
-
-  
+    <footer>
+      <p>Project maintained by <a href="https://github.com/WinterVein">WinterVein</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
   </body>
 </html>
