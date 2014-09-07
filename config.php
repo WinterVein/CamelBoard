@@ -37,7 +37,7 @@ function valid(f) {
 !(/^[A-z&#209;&#241;0-9]*$/i).test(f.value)?f.value = f.value.replace(/[^A-z&#209;&#241;0-9]/ig,''):null;
 } 
 </script>
-<h4> PASSWORD CONFIGURATION:</h4>
+<h3> PASSWORD CONFIGURATION(VERY IMPORTANT, DO THIS FIRST!):</h3>
        your password for posting stuff to blog and administration (NO SPECIAL CHARACTERS,ALL SPECIAL CHARACTERS WILL BE STRIPPED FROM THE PASSWORD ONLY NUMBERS AND LETTERS):<P> <input type='text' name='pass' onkeyup="valid(this)" onblur="valid(this)"/> <P> this can only be viewed by site admin via opening pass.php in a text editor.
         <input type='submit' value='SUBMIT'/>
 		<BR/>NOTE: if special characters are injected into the textbox the password script will be broken.
@@ -142,6 +142,17 @@ function valid(f) {
     </form>
 </body>
 </html>
+<h4> BLOG POST WRITER:</h4>
+  <form action='process.php' method='GET' id="newpost">
+        Title: <input type='text' name='title'/>
+        <br/>
+		Image(use full path and if the image is on the web include the http:// prefix) : <input type='text' name='img'/>
+        <br/>
+		
+		comment : <textarea name='comment' form="newpost"></textarea>
+        <br/>
+        <input type='submit' value='SUBMIT'/>
+    </form>
 <?php 
 
 }
