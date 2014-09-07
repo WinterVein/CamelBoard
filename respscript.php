@@ -45,9 +45,14 @@ $file_handle = fopen("replypostlist.html", "r+");
 $old_content = file_get_contents("replypostlist.html");
 
 
-
+if(strlen($fiximg) > 0)
+{
 $file_contents =  $meta . "title:<font size=\"3\">" . $safetitle . "</font><P>username:<font size=\"3\">" . $fixed .  "</font><P>Date:" . $fixdate . "<p>replyid:" . $fixed . $safetitle . $fixdate . " <P><a href=\"" . $fiximg . "\"target=\"_blank\"><img src=\"" . $fiximg . "\" width=\"30%\" height=\"30%\"></a><P>" . "<P> comment:<P>" . $fixcomment . "<P><a href=\"#" . $fixtitle . "\">In response to:". $fixtitle ."</a>" . $metae ."\n". $old_content;
-
+}
+else
+{
+$file_contents =  $meta . "title:<font size=\"3\">" . $safetitle . "</font><P>username:<font size=\"3\">" . $fixed .  "</font><P>Date:" . $fixdate . "<p>replyid:" . $fixed . $safetitle . $fixdate . " <P><a href=\"" . $fiximg . "\"target=\"_blank\"><img src=\"" . $fiximg . "\"></a><P>" . "<P> comment:<P>" . $fixcomment . "<P><a href=\"#" . $fixtitle . "\">In response to:". $fixtitle ."</a>" . $metae ."\n". $old_content;
+}
 
 fwrite($file_handle, $file_contents);
 fclose($file_handle);
