@@ -25,7 +25,7 @@ $file_contents = $meta . $timezonefix . $metae;
 fwrite($file_handle, $file_contents);
 fclose($file_handle);
 print "Done, you can view your timezone by opening up timezone.php in a text editor. your timezone is:" . $timezonefix;
-echo "<a href=\"setupwizard.php\">click here to go back to the main config control panel page</a> <P><a href=\"setuptime.php\">click here to continue with the setupwizard</a>";
+echo "<a href=\"index.html\">click here to go back to the main site home</a> <P><a href=\"config.php\">click here to go back to the control panel</a>";
 //unlink(__FILE__)
 }
 
