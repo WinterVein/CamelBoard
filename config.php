@@ -149,7 +149,7 @@ function valid(f) {
 		Image(use full path and if the image is on the web include the http:// prefix) : <input type='text' name='img'/>
         <br/>
 		
-		comment : <textarea name='comment' form="newpost"></textarea>
+		comment : <textarea name='comment' rows="5" cols="50 form="newpost"></textarea>
         <br/>
         <input type='submit' value='SUBMIT'/>
     </form>
