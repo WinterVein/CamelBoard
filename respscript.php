@@ -54,6 +54,10 @@ fclose($file_handle);
 
 
 
-print "Done! :) Refresh the Page If you want to view your new post.";
+print "<head>
+<script type=\"text/javascript\">
+   window.location=\"replies.html\";
+</script>
+</head>Done! :) Refresh the Page If you want to view your new post.";
 }
 ?>
