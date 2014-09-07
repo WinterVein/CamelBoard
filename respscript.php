@@ -46,7 +46,7 @@ $old_content = file_get_contents("replypostlist.html");
 
 
 
-$file_contents =  $meta . "title:<font size=\"3\">" . $safetitle . "</font><P>username:<font size=\"3\">" . $fixed .  "</font><P>Date:" . $fixdate . "<p>replyid:" . $fixed . $safetitle . $fixdate . " <P><img src=\"" . $fiximg . "\"><P>" . "<P> comment:<P>" . $fixcomment . "<P><a href=\"#" . $fixtitle . "\">In response to:". $fixtitle ."</a>" . $metae ."\n". $old_content;
+$file_contents =  $meta . "title:<font size=\"3\">" . $safetitle . "</font><P>username:<font size=\"3\">" . $fixed .  "</font><P>Date:" . $fixdate . "<p>replyid:" . $fixed . $safetitle . $fixdate . " <P><a href=\"" . $fiximg . "\"target=\"_blank\"><img src=\"" . $fiximg . "\" width=\"30%\" height=\"30%\"></a><P>" . "<P> comment:<P>" . $fixcomment . "<P><a href=\"#" . $fixtitle . "\">In response to:". $fixtitle ."</a>" . $metae ."\n". $old_content;
 
 
 fwrite($file_handle, $file_contents);
