@@ -51,7 +51,29 @@
 <pre>
 <h4>Welcome to CamelBoard MessageBoard!</h4>
 <a href="index.html">Admin Posts</a>
-<iframe class="content" height="249" width="100%" src="respondwrite.html"></iframe>
+<div height="20%" width="50%"><script language="javascript" type="text/javascript">
+function limitText(limitField, limitCount, limitNum) {
+	if (limitField.value.length > limitNum) {
+		limitField.value = limitField.value.substring(0, limitNum);
+	} else {
+		limitCount.value = limitNum - limitField.value.length;
+	}
+}
+</script>
+    <form action='respscript.php' method='GET' id="newpost">
+	<font size="2">
+        replyid(copy and paste replyid of the comment you want to reply to): <input type='text' name='replyto' id='replyto'/>
+        title(maxlength:50): <input type='text' name='title' onKeyDown="limitText(this.form.title,this.form.countdown,50);" 
+onKeyUp="limitText(this.form.title,this.form.countdown,50);" maxlength="50"/>
+		username(maxlength:20): <input type='text' name='uname' onKeyDown="limitText(this.form.uname,this.form.countdown,20);" 
+onKeyUp="limitText(this.form.uname,this.form.countdown,20);" maxlength="20"/>
+		Image(use full path and if the image is on the web include the http:// prefix) : <input type='text' name='img'/>
+		comment(maxlength:1000) :<P> <textarea name='comment' form="newpost" onKeyDown="limitText(this.form.comment,this.form.countdown,1000);" 
+onKeyUp="limitText(this.form.comment,this.form.countdown,1000);"></textarea>
+		are you human? <img src="2p2.png" width="20%" height="15%"/><input type='text' name='captcha'/>
+        </font>
+        <input type='submit' value='SUBMIT'/>
+    </form></div>
 <iframe class="content" height="600" width="100%" src="replypostlist.html">
 </pre>
 </div>

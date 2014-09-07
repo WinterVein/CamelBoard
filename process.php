@@ -49,6 +49,7 @@ $file_contents = $meta . "Title:<font size=\"3\">" . $title . "</font><P>     " 
 fwrite($file_handle, $file_contents);
 fclose($file_handle);
 print "Done! :) <a href=\"index.html\">click here to go back to home</a><P><a href=\"blogpostlist.html\">click here to view content list</a>";
+
 }
 
 else
