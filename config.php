@@ -36,12 +36,19 @@ if (isset($_POST["password"]) && ($_POST["password"]=="$password")) {
 function valid(f) {
 !(/^[A-z&#209;&#241;0-9]*$/i).test(f.value)?f.value = f.value.replace(/[^A-z&#209;&#241;0-9]/ig,''):null;
 } 
-</script>
+</script><pre> <h4> SECTIONS:</h4>
+<a href="#pwc">-PASSWORD CONFIGURATION</a>
+<a href="#tzc">-TIMEZONE CONFIGURATION</a>
+<a href="#bp">-BLOG POSTING</a>
+<a href="#cd">-COMMENT DELETING</a>
+</pre>
+<div id="pwc">
+<pre>
 <h3> PASSWORD CONFIGURATION(VERY IMPORTANT, DO THIS FIRST!):</h3>
        your password for posting stuff to blog and administration (NO SPECIAL CHARACTERS,ALL SPECIAL CHARACTERS WILL BE STRIPPED FROM THE PASSWORD ONLY NUMBERS AND LETTERS):<P> <input type='text' name='pass' onkeyup="valid(this)" onblur="valid(this)"/> <P> this can only be viewed by site admin via opening pass.php in a text editor.
         <input type='submit' value='SUBMIT'/>
-		<BR/>NOTE: if special characters are injected into the textbox the password script will be broken.
-    </form>
+		NOTE: if special characters are injected into the textbox the password script will be broken.
+    </form></pre></div><div id="tzc"><pre>
 	<P><P><h4>TIMEZONE CONFIGURATION:</h4>
 	<form action='setuptime.php' method='GET' id="newpost">
        your timezone:
@@ -139,22 +146,25 @@ function valid(f) {
 <option value="Pacific/Kiritimati">(GMT+14:00) Kiritimati</option>
 </select>
 	<input type='submit' value='SUBMIT'/>
-    </form>
+    </form></pre></div>
 </body>
-</html>
+</html><div id="bp"><pre>
 <h4> BLOG POST WRITER:</h4>
   <form action='process.php' method='GET' id="newpost">
         Title: <input type='text' name='title'/>
-        <br/>
 		Image(use full path and if the image is on the web include the http:// prefix) : <input type='text' name='img'/>
-        <br/>
-		
 		comment : <textarea name='comment' rows="5" cols="50 form="newpost"></textarea>
-        <br/>
         <input type='submit' value='SUBMIT'/>
+    </form></pre></div><div id="cd"><pre>
+	<h4> COMMENT DELETER:</h4>
+	<form action='delete.php' method='GET' id="newpost">
+		<h5>line number of comment to be deleted(one comment per line):<input type='text' name='linenum'/> <input type='submit' value='SUBMIT'/>
+		refer to the preview below to find the line of the comment<br />(you can find the comment by looking for it's reply id with ctrl+f, simply do ctrl+f and then search for id="yourreplyid")</h5> 
     </form>
-<?php 
-
+<h4>	DO NOT EDIT THE CONTENTS OF THIS PREVIEW OR ELSE THE INFORMATION DISPLAYED IS INCORRECT, <br/>THIS IS ONLY A REFERENCE FOR FINDING LINE NUMBERS<br/></h4>
+<iframe src="delviewer.php" width="100%" height="500" type="text/html">your browser does not support iframes</iframe>
+</pre></div>
+<?php
 }
 
 else

@@ -19,35 +19,18 @@ Created and Written from scratch by: WinterVein
 credits to: 
 - WinterVein, for creating CamelBoard), 
 - Steve Dawson, for writing the password protection PHP script(you can find him at 
-
 http://www.stevedawson.com/)
 - The BootStrap Team(Mdo, Fat, and the rest of their contributers) for writing
  the BootStrap CSS framework that is utilized by CamelBoard 
 (you can find them at http://getbootstrap.com/)
-
+- the creators of ace editor (you can find them at:http://ace.c9.io/)
 NOTE: 
-- Admin blog posts(BlogPoster.php) can involve html, php, css, and javascript (this is so that you can style your posts).
+- Admin blog posts can involve html, php, css, and javascript (this is so that you can style your posts).
 - Things posted to the messageboard (respondwrite.html) do not allow use of code(this is for saftey reasons). 
 
-FILES:
-bootstrap-3.1.1-dist (CSS framework folder)
-BlogPoster.php
-homeNS.png
-homeS.png
-logo.png
-process.php
-replies.html
-replypostlist.html
-respondwrite.html
-respscript.php
-config.php
-setuppass.php
-setuptime.php
-pass.php
-timezone.php
-msgboardNS.png
-msgboardS.png
-
+Libraries used:
+-bootstrap
+-ace editor
 
 IMPORTANT:
 *FOLLOW THE README IN ORDER TO CONFIGURE YOUR MessageBoard!
@@ -60,11 +43,12 @@ README:
 
 2(optional but useful to know)you can delete posts! 
 
--To do this, open up replypostlist.html(if you want to delete a comment) or 
-blogpostlist.html(if you want to delete a post). and then simply search for the title(or reply
-id) of the post you want to delete, and then highlight that div from the start of the div to 
-
-the end of the div and press the backspace key on your keyboard.
+-To do this, view config.php in your browser, and go to the "delete comments" section,
+you can either count the line of the comment you want to delete and enter it in the text box
+ (remember one comment per line, so identify which comment is on which line by looking at 
+id="yourreplyid", and then counting which line it is on)
+ or you can simply open it in a text editor and view it's line and delete it.
+you can open 
 
 3(optional).You can change the site logo!
 
