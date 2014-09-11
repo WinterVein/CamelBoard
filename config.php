@@ -38,9 +38,13 @@ function valid(f) {
 } 
 </script><pre> <h4> SECTIONS:</h4>
 <a href="#pwc">-PASSWORD CONFIGURATION</a>
+<a href="#auth">-BLOG AUTHOR NAME CONFIGURATION</a>
 <a href="#tzc">-TIMEZONE CONFIGURATION</a>
 <a href="#bp">-BLOG POSTING</a>
 <a href="#cd">-COMMENT DELETING</a>
+<a href="#bd">-BLOGPOST DELETING</a>
+<a href="clear">-clearing messageboard of posts</a>
+<a href="clearblog">-clearing blog of posts</a>
 </pre>
 <div id="pwc">
 <pre>
@@ -48,6 +52,14 @@ function valid(f) {
        your password for posting stuff to blog and administration (NO SPECIAL CHARACTERS,ALL SPECIAL CHARACTERS WILL BE STRIPPED FROM THE PASSWORD ONLY NUMBERS AND LETTERS):<P> <input type='text' name='pass' onkeyup="valid(this)" onblur="valid(this)"/> <P> this can only be viewed by site admin via opening pass.php in a text editor.
         <input type='submit' value='SUBMIT'/>
 		NOTE: if special characters are injected into the textbox the password script will be broken.
+    </form></pre></div>
+<div id="auth">
+<pre>
+<h4> Blog author name (important):</h4>
+<form action='setupauthor.php' method='GET' id="newpost">
+       your name or alias:(NO SPECIAL CHARACTERS,ALL SPECIAL CHARACTERS WILL BE STRIPPED FROM THE PASSWORD ONLY NUMBERS AND LETTERS):<P> <input type='text' name='author' onkeyup="valid(this)" onblur="valid(this)"/><p>
+        <input type='submit' value='SUBMIT'/>
+		NOTE: if special characters are injected into the textbox the naming script will be broken.
     </form></pre></div><div id="tzc"><pre>
 	<P><P><h4>TIMEZONE CONFIGURATION:</h4>
 	<form action='setuptime.php' method='GET' id="newpost">
@@ -155,15 +167,47 @@ function valid(f) {
 		Image(use full path and if the image is on the web include the http:// prefix) : <input type='text' name='img'/>
 		comment : <textarea name='comment' rows="5" cols="50 form="newpost"></textarea>
         <input type='submit' value='SUBMIT'/>
-    </form></pre></div><div id="cd"><pre>
-	<h4> COMMENT DELETER:</h4>
-	<form action='delete.php' method='GET' id="newpost">
-		<h5>line number of comment to be deleted(one comment per line):<input type='text' name='linenum'/> <input type='submit' value='SUBMIT'/>
-		refer to the preview below to find the line of the comment<br />(you can find the comment by looking for it's reply id with ctrl+f, simply do ctrl+f and then search for id="yourreplyid")</h5> 
+    </form></pre></div>
+	<div id="cd"><pre>
+	<h4> THREAD/POST DELETER:</h4>
+	<form action='threaddelete.php' method='GET' id="newpost">
+		<h5>replyid(no sub reply ids) of thread:<input type='text' name='repid'/> <input type='submit' value='SUBMIT'/>
+		refer to the preview below to find the replyid of the comment<br/>
     </form>
-<h4>	DO NOT EDIT THE CONTENTS OF THIS PREVIEW OR ELSE THE INFORMATION DISPLAYED IS INCORRECT, <br/>THIS IS ONLY A REFERENCE FOR FINDING LINE NUMBERS<br/></h4>
-<iframe src="delviewer.php" width="100%" height="500" type="text/html">your browser does not support iframes</iframe>
+	
+	<h5> IMPORTANT NOTE: to delete specific sub comments, you must open the file with the replyid name in the comment posts folder<br/>, and remove the sub-comment</h5>
+	<h5> <br/>also, whenever a comment is deleted, its name still remains in the replypostlist.php file, <br/>open that in text editor, and get rid of the php script with the reply id of the comment you want to delete in it.</h5>
+<iframe src="replypostlist.php" width="50%" height="200" type="text/html"></iframe>
 </pre></div>
+<div id="bd"><pre>
+	<h4> Blog Post DELETER:</h4>
+	<form action='blogdelete.php' method='GET' id="newpost">
+		<h5>postid of comment you want to delete:<input type='text' name='postid'/> <input type='submit' value='SUBMIT'/>
+		refer to the preview below to find the postid of the blog post<br/>	
+    </form>
+	
+	<h5> IMPORTANT NOTE: to delete specific sub comments, you must open the file with the replyid name in the comment posts folder<br/>, and remove the sub-comment</h5>
+	<h5> <br/>also, whenever a comment is deleted, its name still remains in the replypostlist.php file, <br/>open that in text editor, and get rid of the php script with the reply id of the comment you want to delete in it.</h5>
+<iframe src="blogpostlist.php" width="50%" height="200" type="text/html"></iframe>
+</pre></div>
+<div id="clear"><pre>
+	<h4> THREAD AND COMMENT CLEARER/RESETER:</h4>
+	<form action='clearall.php' method='GET' id="newpost">
+	<h4> it is recommended to do this atleast once in a while, or if you messed up your replypostlist.php file</h4><br/>
+	WARNING: all threads and comments will be deleted
+		<h5><input type='submit' value='SUBMIT'/></h5>
+    </form>
+</pre></div>
+<div id="clearblog"><pre>
+	<h4> Blog post CLEARER/RESETER:</h4>
+	<form action='clearallblog.php' method='GET' id="newpost">
+	<h4> it is recommended to do this atleast once in a while, or if you messed up your blogpostlist.php file</h4><br/>
+	WARNING: all blog posts will be deleted
+		<h5><input type='submit' value='SUBMIT'/></h5>
+    </form>
+</pre></div>
+
+
 <?php
 }
 

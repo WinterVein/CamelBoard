@@ -11,6 +11,7 @@
 /************************************************************************/
 ##########################################################################
 require("pass.php");
+require("author.php");
 $password = $passwerd;
 ##########################################################################
 ?>
@@ -34,20 +35,31 @@ TD { FONT-SIZE: 8pt; COLOR: #000000; FONT-FAMILY: Verdana, Tahoma, Arial}
   print "<h2 align=\"center\">Restricted Area!</h2>";
 // If password is valid let the user get access
 if (isset($_POST["password"]) && ($_POST["password"]=="$password")) {
-$title = $_GET['title'];
+$title = htmlentities($_GET['title']);
 require("timezone.php"); // You can Change this to your timezone if you want find list of timezones here:http://php.net/manual/en/timezones.php
-$date = date('Y-m-d H:i:s');
-$meta = "<P><div><pre>";
+$date = date('Y_m_d-H.i.s');
+$meta = "<P><div id=\"" . $title . $date ."\"><pre>";
 $metae = "</div></pre></P>";
 $img = $_GET['img'];
 $comment = $_GET['comment'];
 
-$file_handle = fopen("blogpostlist.html", "r+");
-$old_content = file_get_contents("blogpostlist.html");
-$file_contents = $meta . "Title:<font size=\"3\">" . $title . "</font><P>     " . "Date:" . $date . " <P><img src=\"" . $img . "\"><P>" . "<P> comment:<P>" . $comment . $metae . "\n" . $old_content;
+$file_handle = fopen("blogposts/" . $title . $date . ".php", "c+");
+$file_contents = $meta . "Title:<font size=\"3\">" . $title . "</font><P>     " . "Date:" . $date . "<br/>Author:" . $author . "<P>postid:" . $title . $date ."<P><img src=\"" . $img . "\"><P>" . "<P> comment:<P>" . $comment . $metae . "\n";
 
 fwrite($file_handle, $file_contents);
 fclose($file_handle);
+$file_handle = fopen("blogpostlist.php", "c+");
+
+$file_contents = "<?php 
+error_reporting(0);
+\$file_handle = fopen(\"blogposts/" . $title . $date . ".php\", \"r+\");
+\$content = file_get_contents(\"blogposts/". $title . $date . ".php\");
+print \$content;
+fclose(\$file_handle);
+?>\n</div></pre></p>". file_get_contents("blogpostlist.php");
+fwrite($file_handle, $file_contents);
+fclose($file_handle);
+
 print "Done! :) <a href=\"index.html\">click here to go back to home</a><P><a href=\"blogpostlist.html\">click here to go back to site home</a><P><a href=\"config.php\">click here to view content list</a>";
 
 }
