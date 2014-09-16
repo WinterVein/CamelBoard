@@ -3,7 +3,7 @@
 </head>
 <?php
 require("timezone.php"); // You can Change this to your timezone if you want find list of timezones here:http://php.net/manual/en/timezones.php
-$date = date('Y_m_d-H.i.s');
+$date = date('Y_m_d-H.i.s');// Year_Month_Date-Hour.Minute.Second
 $captcha = $_GET['captcha'];
 $title = $_GET['title'];
 $retitle = $_GET['replyto'];
@@ -16,7 +16,7 @@ $fixeds = htmlentities($uname);
 $fixtitles = htmlentities($retitle);
 $safetitles = htmlentities($title); 
 $fixcomments = htmlentities($comment);
-$fiximgs = htmlentities($img);
+$fiximgs = htmlentities($img); //might want to change this to a striptags(); function, im not sure yet though :'C im kind of torn about if this works or not, im scared it breaks links
 $srts = htmlentities($srto);
 $fixtitlel = nl2br($fixtitles);
 $fixcommentl= nl2br($fixcomments);
