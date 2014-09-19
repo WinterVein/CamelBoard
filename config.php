@@ -1,5 +1,5 @@
 <head>
-<link rel="stylesheet" type="text/css" href="bootstrap-3.1.1-dist/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="assets/bootstrap-3.1.1-dist/css/bootstrap.css" />
 </head>
 <?php
 /************************************************************************/
@@ -20,7 +20,7 @@ $password = $passwerd;  //(CaSe-SeNsItIvE!) CHANGE THIS TO WHATEVER YOU WANT OR 
 ?>
 <html>
 <head><title>CamelBoard config</title>
-<link rel="stylesheet" type="text/css" href="bootstrap-3.1.1-dist/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="assets/bootstrap-3.1.1-dist/css/bootstrap.css" />
 </head>
 <body>
 <?php

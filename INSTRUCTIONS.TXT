@@ -47,7 +47,7 @@ you can open
 
 3(optional).You can change the site logo!
 
--To do this you can simply replace logo.png with your own file(but rename your file to 
+-To do this you can simply replace assets/images/logo.png with your own file(but rename your file to 
 
 "logo.png")
 

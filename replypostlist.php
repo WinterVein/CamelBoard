@@ -4,5 +4,5 @@
 ?>
 <head>
 <title>replypostlist</title>
-<link rel="stylesheet" type="text/css" href="bootstrap-3.1.1-dist/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="assets/bootstrap-3.1.1-dist/css/bootstrap.css" />
 </head></pre></pre></div></div></pre>
