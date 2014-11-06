@@ -1,0 +1,106 @@
+<?php
+#######################################################################
+#				PHP Simple Captcha Script
+#	Script Url: http://toolspot.org/php-simple-captcha.php
+#	Author: Sunny Verma
+#	Website: http://toolspot.org
+#	License: GPL 2.0, @see http://www.gnu.org/licenses/gpl-2.0.html
+########################################################################
+session_start();
+if(isset($_POST["captcha"])&&$_POST["captcha"]!=""&&$_SESSION["code"]==$_POST["captcha"])
+{
+?>
+<html>
+<head>
+<title>CamelBoard</title>
+<link rel="stylesheet" type="text/css" href="assets/bootstrap-3.1.1-dist/css/bootstrap.css" />
+</head>
+<script>
+function getUrl(){
+var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
+for(var i = 0; i < hashParams.length; i++){
+    var p = hashParams[i].split('=');
+    document.getElementById(p[0]).value = decodeURIComponent(p[1]);;
+}}</script>
+<Body onload="getUrl()">
+<div class="container">
+<div class="row">
+
+</div>
+</div>
+<style type="text/css">
+  
+.large {
+    color: #1F1F1F;
+    font-family:arial;
+    font-size: 4pt;
+    width:50%;
+}
+.link {
+    color: #1F1F1F;
+    font-family:arial;
+    font-size: 4pt;
+    width:30%;
+} 
+.mainmenu {
+           width: 8%;
+           height: 7%;
+           border-style:inset;
+           border-width:5px;
+ }
+ .content {
+           border-style:none;
+           border-width:0px;
+		   }
+</style>
+<center>
+<a href="http://wintervein.github.io/CamelBoard/">click here to view to the CamelBoard project</a> <P><a href="config.php">admin control panel(write blogposts here)</a>
+</center>
+<center>
+<a href="index.html"><img src="assets/images/logo.png" width="20%" height="15%"/></a>
+</center>
+<p>
+
+<center> <div class="mainmenu"><a href="index.html"><img src="assets/images/homeNS.png" width="100%"/></a></div>    <div class="mainmenu"><a href="replies.html"><img src="assets/images/msgboardS.png" width="100%"/></a></div></center>
+
+<p>
+<center>
+<div class="large" width="100%" >
+<pre>
+
+<h4>Welcome to CamelBoard MessageBoard!</h4>
+<a href="index.html">Admin Posts</a>
+<script language="javascript" type="text/javascript">
+function limitText(limitField, limitCount, limitNum) {
+	if (limitField.value.length > limitNum) {
+		limitField.value = limitField.value.substring(0, limitNum);
+	} else {
+		limitCount.value = limitNum - limitField.value.length;
+	}
+}
+
+
+</script>
+    <form action='respscript.php' method='GET' id="newpost">
+	<font size="2">
+        replyid(copy and paste replyid of the comment you want to reply to): <input type='text' name='replyto' id='replyto'/>
+		SUB-replyid(copy and paste replyid of the sub-comment you want to reply to): <input type='text' name='srt' id='srt'/>
+        title(maxlength:50): <input type='text' name='title' onKeyDown="limitText(this.form.title,this.form.countdown,50);" 
+onKeyUp="limitText(this.form.title,this.form.countdown,50);" maxlength="50"/>
+		username(maxlength:20): <input type='text' name='uname' onKeyDown="limitText(this.form.uname,this.form.countdown,20);" 
+onKeyUp="limitText(this.form.uname,this.form.countdown,20);" maxlength="20"/>
+		Image(use full path and if the image is on the web include the http:// prefix) : <input type='text' name='img'/>
+		comment(maxlength:1000) :<P> <textarea name='comment' rows="5" cols="50" form="newpost" onKeyDown="limitText(this.form.comment,this.form.countdown,1000);" 
+onKeyUp="limitText(this.form.comment,this.form.countdown,1000);"></textarea>
+		
+        <input type='submit' value='SUBMIT'/>
+    </form></div>
+<iframe class="content" height="600" width="100%" src="replypostlist.php">
+</pre>
+<?
+}
+else
+{
+die("Wrong Code Entered");
+}
+?>
