@@ -38,7 +38,7 @@ if (isset($_POST["password"]) && ($_POST["password"]=="$password")) {
 $title = htmlentities($_GET['title']);
 require("timezone.php"); // You can Change this to your timezone if you want find list of timezones here:http://php.net/manual/en/timezones.php
 $date = date('Y_m_d-H.i.s');
-$meta = "<P><div id=\"" . $title . $date ."\"><pre>";
+$meta = "<P><div id=\"" . $title . $date ."\"><pre class=\"chanbody\">";
 $metae = "</div></pre></P>";
 $img = $_GET['img'];
 $comment = $_GET['comment'];
@@ -50,7 +50,8 @@ fwrite($file_handle, $file_contents);
 fclose($file_handle);
 $file_handle = fopen("blogpostlist.php", "c+");
 
-$file_contents = "<?php 
+$file_contents = "\n
+<?php 
 error_reporting(0);
 \$file_handle = fopen(\"blogposts/" . $title . $date . ".php\", \"r+\");
 \$content = file_get_contents(\"blogposts/". $title . $date . ".php\");

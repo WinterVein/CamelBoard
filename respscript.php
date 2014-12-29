@@ -23,13 +23,13 @@ $fixedl = nl2br($fixeds);
 $srtl = nl2br($srts);
 $safetitlel = nl2br($safetitles);
 $safetitle = str_replace(array("\r\n", "\r", "\n"), "", $safetitlel);
-$fixtitle = str_replace(array("\r\n", "\r", "\n"), "", $fixtitlel);
+$fixreplyid = str_replace(array("\r\n", "\r", "\n"), "", $fixtitlel);
 $fixcomment = str_replace(array("\r\n", "\r", "\n"), "", $fixcommentl);
 $fixed = str_replace(array("\r\n", "\r", "\n"), "", $fixedl);
 $srt = str_replace(array("\r\n", "\r", "\n"), "", $srtl);
-$meta = "<P><div id=\"" . $fixed . $safetitle . $fixdate ."\"><pre>";
+$meta = "<P><div id=\"" . $fixed . $fixdate ."\"><pre class=\"chanbody\">";
 $metae = "</div></pre></P>";
-$mreplyid = $fixtitle . $fixdate;
+//$mreplyid = $fixtitle . $fixdate;
 if(empty($fixed) | empty($safetitle) | empty($fixcomment))
 {
 print "go back and fill out username and/or comment and/or title and retry.";
@@ -48,20 +48,20 @@ print "your comment is too long.";
 }
 else if(strlen($srt) > 0)
 {
-if(strlen($fixtitle) <= 0)
+if(strlen($fixreplyid) <= 0)
 {
 	print "if you enter a sub-reply id, you must enter a replyid for the original thread<P>refresh the page and try again,";
 }
 
 else{
-	$file_handle = fopen("commentposts/" . $fixtitle . ".php", "a+");
+	$file_handle = fopen("commentposts/" . $fixreplyid . ".php", "a+");
 	if(strlen($fiximg) > 0)
 	{
-	$file_contents =  "<P><div id=\"" . $fixed . $safetitle . $fixdate ."\"><hr style=\"background:#888888; border:0; height:2px\" /><blockquote><font size=\"2\">" . "title:<font size=\"4\">" . $safetitle . "</font><P>username:<font size=\"3\">" . $fixed .  "</font><P>Date:" . $fixdate . "<p>sub-replyid:" . $fixed . $safetitle . $fixdate . "<P><a href=\"" . $fiximg . "\"target=\"_blank\"><img src=\"" . $fiximg . "\" width=\"30%\" height=\"30%\"></a><P>" . "<P> comment:<P>" . $fixcomment . "<P><a href=\"#" . $srt . "\">In response to:". $srt ."</a>" . "</font></div></blockquote></P>" . "\n";
+	$file_contents =  "<P><div id=\"" . $fixed . $fixdate ."\"><hr style=\"background:#888888; border:0; height:1px\" /><blockquote><pre class=\"chanbody\"><font size=\"2\">" . "title:<font size=\"4\">" . $safetitle . "</font><P>username:<font size=\"3\">" . $fixed .  "</font><P>Date:" . $fixdate . "<p>sub-replyid:" . $fixed . $fixdate . "<P><a href=\"" . $fiximg . "\"target=\"_blank\"><img src=\"" . $fiximg . "\" width=\"30%\" height=\"30%\"></a><P>" . "<P> comment:<P>" . $fixcomment . "<P><a href=\"#" . $srt . "\">In response to:". $srt ."</a>" . "</font></div></blockquote></P>" . "\n";
 	}
 	else
 	{
-	$file_contents =  "<P><div id=\"" . $fixed . $safetitle . $fixdate ."\"><hr style=\"background:#888888; border:0; height:2px\" /><blockquote><font size=\"2\">" . "title:<font size=\"3\">" . $safetitle . "</font><P>username:<font size=\"3\">" . $fixed .  "</font><P>Date:" . $fixdate . "<p>sub-replyid:" . $fixed . $safetitle . $fixdate . "<P><a href=\"" . $fiximg . "\"target=\"_blank\"><img src=\"" . $fiximg . "\"></a><P>" . "<P> comment:<P>" . $fixcomment . "<P><a href=\"#" . $srt . "\">In response to:". $srt ."</a>" . "</font></div></blockquote></P>" ."\n";
+	$file_contents =  "<P><div id=\"" . $fixed . $fixdate ."\"><hr style=\"background:#888888; border:0; height:1px\" /><blockquote><pre class=\"chanbody\"><font size=\"2\">" . "title:<font size=\"3\">" . $safetitle . "</font><P>username:<font size=\"3\">" . $fixed .  "</font><P>Date:" . $fixdate . "<p>sub-replyid:" . $fixed . $fixdate . "<P><a href=\"" . $fiximg . "\"target=\"_blank\"><img src=\"" . $fiximg . "\"></a><P>" . "<P> comment:<P>" . $fixcomment . "<P><a href=\"#" . $srt . "\">In response to:". $srt ."</a>" . "</font></div></blockquote></P>" ."\n";
 	}
 	fwrite($file_handle, $file_contents);
 	fclose($file_handle);
@@ -73,16 +73,16 @@ else{
 	</head>";
 	}
 }
-else if(strlen($fixtitle) > 0)
+else if(strlen($fixreplyid) > 0)
 	{
-	$file_handle = fopen("commentposts/" . $fixtitle . ".php", "a+");
+	$file_handle = fopen("commentposts/" . $fixreplyid . ".php", "a+");
 	if(strlen($fiximg) > 0)
 	{
-	$file_contents =  "<P><div id=\"" . $fixed . $safetitle . $fixdate ."\"><hr style=\"background:#888888; border:0; height:2px\" /><blockquote><font size=\"2\">" . "title:<font size=\"4\">" . $safetitle . "</font><P>username:<font size=\"3\">" . $fixed .  "</font><P>Date:" . $fixdate . "<p>sub-replyid:" . $fixed . $safetitle . $fixdate . "<P><a href=\"" . $fiximg . "\"target=\"_blank\"><img src=\"" . $fiximg . "\" width=\"30%\" height=\"30%\"></a><P>" . "<P> comment:<P>" . $fixcomment . "<P><a href=\"#" . $fixtitle . "\">In response to:". $fixtitle ."</a>" . "</font></div></blockquote></P>" . "\n";
+	$file_contents =  "<P><div id=\"" . $fixed . $fixdate ."\"><hr style=\"background:#888888; border:0; height:1px\" /><blockquote><pre class=\"chanbody\"><font size=\"2\">" . "title:<font size=\"4\">" . $safetitle . "</font><P>username:<font size=\"3\">" . $fixed .  "</font><P>Date:" . $fixdate . "<p>sub-replyid:" . $fixed . $fixdate . "<P><a href=\"" . $fiximg . "\"target=\"_blank\"><img src=\"" . $fiximg . "\" width=\"30%\" height=\"30%\"></a><P>" . "<P> comment:<P>" . $fixcomment . "<P><a href=\"#" . $fixreplyid . "\">In response to:". $fixreplyid ."</a>" . "</font></div></blockquote></P>" . "\n";
 	}
 	else
 	{
-	$file_contents =  "<P><div id=\"" . $fixed . $safetitle . $fixdate ."\"><hr style=\"background:#888888; border:0; height:2px\" /><blockquote><font size=\"2\">" . "title:<font size=\"3\">" . $safetitle . "</font><P>username:<font size=\"3\">" . $fixed .  "</font><P>Date:" . $fixdate . "<p>sub-replyid:" . $fixed . $safetitle . $fixdate . "<P><a href=\"" . $fiximg . "\"target=\"_blank\"><img src=\"" . $fiximg . "\"></a><P>" . "<P> comment:<P>" . $fixcomment . "<P><a href=\"#" . $fixtitle . "\">In response to:". $fixtitle ."</a>" . "</font></div></blockquote></P>" ."\n";
+	$file_contents =  "<P><div id=\"" . $fixed . $fixdate ."\"><hr style=\"background:#888888; border:0; height:1px\" /><blockquote><pre class=\"chanbody\"><font size=\"2\">" . "title:<font size=\"3\">" . $safetitle . "</font><P>username:<font size=\"3\">" . $fixed .  "</font><P>Date:" . $fixdate . "<p>sub-replyid:" . $fixed . $fixdate . "<P><a href=\"" . $fiximg . "\"target=\"_blank\"><img src=\"" . $fiximg . "\"></a><P>" . "<P> comment:<P>" . $fixcomment . "<P><a href=\"#" . $fixreplyid . "\">In response to:". $fixreplyid ."</a>" . "</font></div></blockquote></P>" ."\n";
 	}
 	fwrite($file_handle, $file_contents);
 	fclose($file_handle);
@@ -98,17 +98,17 @@ else
 
 if(strlen($fiximg) > 0)
 {
-$file_handle = fopen("commentposts/" . $fixed . $safetitle . $fixdate . ".php", "c+");
-$old_content = file_get_contents($fixed . $safetitle . $fixdate .".php");
-$file_contents =  $meta . "title:<font size=\"3\">" . $safetitle . "</font><P>username:<font size=\"3\">" . $fixed .  "</font><P>Date:" . $fixdate . "<p>replyid:" . $fixed . $safetitle . $fixdate . "<P><a href=\"" . $fiximg . "\"target=\"_blank\"><img src=\"" . $fiximg . "\" width=\"30%\" height=\"30%\"></a><P>" . "<P> comment:<P>" . $fixcomment . "</P>" ."\n". $old_content;
+$file_handle = fopen("commentposts/" . $fixed . $fixdate . ".php", "c+");
+$old_content = file_get_contents($fixed . $fixdate .".php");
+$file_contents =  $meta . "title:<font size=\"3\">" . $safetitle . "</font><P>username:<font size=\"3\">" . $fixed .  "</font><P>Date:" . $fixdate . "<p>replyid:" . $fixed . $fixdate . "<P><a href=\"" . $fiximg . "\"target=\"_blank\"><img src=\"" . $fiximg . "\" width=\"30%\" height=\"30%\"></a><P>" . "<P> comment:<P>" . $fixcomment . "</P>" ."\n". $old_content;
 fwrite($file_handle, $file_contents);
 fclose($file_handle);
 }
 else
 {
-$file_handle = fopen("commentposts/" .$fixed . $safetitle . $fixdate . ".php", "c+");
-$old_content = file_get_contents($fixed . $safetitle . $fixdate .".php");
-$file_contents =  $meta . "title:<font size=\"3\">" . $safetitle . "</font><P>username:<font size=\"3\">" . $fixed .  "</font><P>Date:" . $fixdate . "<p>replyid:" . $fixed . $safetitle . $fixdate . "<P><a href=\"" . $fiximg . "\"target=\"_blank\"><img src=\"" . $fiximg . "\"></a><P>" . "<P> comment:<P>" . $fixcomment . "</P>" ."\n". $old_content;
+$file_handle = fopen("commentposts/" .$fixed . $fixdate . ".php", "c+");
+$old_content = file_get_contents($fixed . $fixdate .".php");
+$file_contents =  $meta . "title:<font size=\"3\">" . $safetitle . "</font><P>username:<font size=\"3\">" . $fixed .  "</font><P>Date:" . $fixdate . "<p>replyid:" . $fixed . $fixdate . "<P><a href=\"" . $fiximg . "\"target=\"_blank\"><img src=\"" . $fiximg . "\"></a><P>" . "<P> comment:<P>" . $fixcomment . "</P>" ."\n". $old_content;
 fwrite($file_handle, $file_contents);
 fclose($file_handle);
 }
@@ -116,10 +116,11 @@ fclose($file_handle);
 
 $file_handle = fopen("replypostlist.php", "c+");
 
-$file_contents = "<?php 
+$file_contents = "\n
+<?php 
 error_reporting(0);
-\$file_handle = fopen(\"commentposts/" . $fixed . $safetitle . $fixdate . ".php\", \"r+\");
-\$content = file_get_contents(\"commentposts/". $fixed . $safetitle . $fixdate . ".php\");
+\$file_handle = fopen(\"commentposts/" . $fixed . $fixdate . ".php\", \"r+\");
+\$content = file_get_contents(\"commentposts/". $fixed . $fixdate . ".php\");
 print \$content;
 fclose(\$file_handle);
 ?>\n</div></pre></p>" . file_get_contents("replypostlist.php");

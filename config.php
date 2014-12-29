@@ -1,6 +1,35 @@
 <head>
 <link rel="stylesheet" type="text/css" href="assets/bootstrap-3.1.1-dist/css/bootstrap.css" />
 </head>
+<style type="text/css">
+  
+.large {
+    color: #1F1F1F;
+    font-family:arial;
+    font-size: 4pt;
+    width:50%;
+}
+.chanbody { background:#CCFF66;}
+body { background:#DBFF94;}
+.tabbody { background:#CCFFCC;}
+.link {
+    color: #1F1F1F;
+    font-family:arial;
+    font-size: 4pt;
+    width:30%;
+} 
+.mainmenu {
+           width: 8%;
+           height: 7%;
+           border-style:inset;
+           border-width:5px;
+ }
+ .content {
+           border-style:none;
+           border-width:0px;
+       }
+</style>
+
 <?php
 /************************************************************************/
 /* PHP Simple PasswordProtect v1.0                                      */
@@ -22,6 +51,34 @@ $password = $passwerd;  //(CaSe-SeNsItIvE!) CHANGE THIS TO WHATEVER YOU WANT OR 
 <head><title>CamelBoard config</title>
 <link rel="stylesheet" type="text/css" href="assets/bootstrap-3.1.1-dist/css/bootstrap.css" />
 </head>
+<style type="text/css">
+  
+.large {
+    color: #1F1F1F;
+    font-family:arial;
+    font-size: 4pt;
+    width:50%;
+}
+.chanbody { background:#CCFF66;}
+body { background:#DBFF94;}
+.tabbody { background:#CCFFCC;}
+.link {
+    color: #1F1F1F;
+    font-family:arial;
+    font-size: 4pt;
+    width:30%;
+} 
+.mainmenu {
+           width: 8%;
+           height: 7%;
+           border-style:inset;
+           border-width:5px;
+ }
+ .content {
+           border-style:none;
+           border-width:0px;
+       }
+</style>
 <body>
 <?php
   print "<h2 align=\"center\">Restricted Area! CONTROL PANEL</h2>";
@@ -36,31 +93,31 @@ if (isset($_POST["password"]) && ($_POST["password"]=="$password")) {
 function valid(f) {
 !(/^[A-z&#209;&#241;0-9]*$/i).test(f.value)?f.value = f.value.replace(/[^A-z&#209;&#241;0-9]/ig,''):null;
 } 
-</script><pre> <h4> SECTIONS:</h4>
+</script><pre class="chanbody"> <h4> SECTIONS:</h4>
 <a href="#pwc">-PASSWORD CONFIGURATION</a>
 <a href="#auth">-BLOG AUTHOR NAME CONFIGURATION</a>
 <a href="#tzc">-TIMEZONE CONFIGURATION</a>
 <a href="#bp">-BLOG POSTING</a>
 <a href="#cd">-COMMENT DELETING</a>
 <a href="#bd">-BLOGPOST DELETING</a>
-<a href="clear">-clearing messageboard of posts</a>
-<a href="clearblog">-clearing blog of posts</a>
+<a href="#clear">-clearing messageboard of posts</a>
+<a href="#clearblog">-clearing blog of posts</a>
 </pre>
 <div id="pwc">
-<pre>
+<pre class="chanbody">
 <h3> PASSWORD CONFIGURATION(VERY IMPORTANT, DO THIS FIRST!):</h3>
        your password for posting stuff to blog and administration (NO SPECIAL CHARACTERS,ALL SPECIAL CHARACTERS WILL BE STRIPPED FROM THE PASSWORD ONLY NUMBERS AND LETTERS):<P> <input type='text' name='pass' onkeyup="valid(this)" onblur="valid(this)"/> <P> this can only be viewed by site admin via opening pass.php in a text editor.
         <input type='submit' value='SUBMIT'/>
 		NOTE: if special characters are injected into the textbox the password script will be broken.
     </form></pre></div>
 <div id="auth">
-<pre>
+<pre class="chanbody">
 <h4> Blog author name (important):</h4>
 <form action='setupauthor.php' method='GET' id="newpost">
        your name or alias:(NO SPECIAL CHARACTERS,ALL SPECIAL CHARACTERS WILL BE STRIPPED FROM THE PASSWORD ONLY NUMBERS AND LETTERS):<P> <input type='text' name='author' onkeyup="valid(this)" onblur="valid(this)"/><p>
         <input type='submit' value='SUBMIT'/>
 		NOTE: if special characters are injected into the textbox the naming script will be broken.
-    </form></pre></div><div id="tzc"><pre>
+    </form></pre></div><div id="tzc"><pre class="chanbody">
 	<P><P><h4>TIMEZONE CONFIGURATION:</h4>
 	<form action='setuptime.php' method='GET' id="newpost">
        your timezone:
@@ -160,7 +217,7 @@ function valid(f) {
 	<input type='submit' value='SUBMIT'/>
     </form></pre></div>
 </body>
-</html><div id="bp"><pre>
+</html><div id="bp"><pre class="chanbody">
 <h4> BLOG POST WRITER:</h4>
   <form action='process.php' method='GET' id="newpost">
         Title: <input type='text' name='title'/>
@@ -168,7 +225,7 @@ function valid(f) {
 		comment : <textarea name='comment' rows="5" cols="50 form="newpost"></textarea>
         <input type='submit' value='SUBMIT'/>
     </form></pre></div>
-	<div id="cd"><pre>
+	<div id="cd"><pre class="chanbody">
 	<h4> THREAD/POST DELETER:</h4>
 	<form action='threaddelete.php' method='GET' id="newpost">
 		<h5>replyid(no sub reply ids) of thread:<input type='text' name='repid'/> <input type='submit' value='SUBMIT'/>
@@ -179,7 +236,7 @@ function valid(f) {
 	<h5> <br/>also, whenever a comment is deleted, its name still remains in the replypostlist.php file, <br/>open that in text editor, and get rid of the php script with the reply id of the comment you want to delete in it.</h5>
 <iframe src="replypostlist.php" width="50%" height="200" type="text/html"></iframe>
 </pre></div>
-<div id="bd"><pre>
+<div id="bd"><pre class="chanbody">
 	<h4> Blog Post DELETER:</h4>
 	<form action='blogdelete.php' method='GET' id="newpost">
 		<h5>postid of comment you want to delete:<input type='text' name='postid'/> <input type='submit' value='SUBMIT'/>
@@ -190,7 +247,7 @@ function valid(f) {
 	<h5> <br/>also, whenever a comment is deleted, its name still remains in the replypostlist.php file, <br/>open that in text editor, and get rid of the php script with the reply id of the comment you want to delete in it.</h5>
 <iframe src="blogpostlist.php" width="50%" height="200" type="text/html"></iframe>
 </pre></div>
-<div id="clear"><pre>
+<div id="clear"><pre class="chanbody">
 	<h4> THREAD AND COMMENT CLEARER/RESETER:</h4>
 	<form action='clearall.php' method='GET' id="newpost">
 	<h4> it is recommended to do this atleast once in a while, or if you messed up your replypostlist.php file</h4><br/>
@@ -198,7 +255,7 @@ function valid(f) {
 		<h5><input type='submit' value='SUBMIT'/></h5>
     </form>
 </pre></div>
-<div id="clearblog"><pre>
+<div id="clearblog"> <pre class="chanbody">
 	<h4> Blog post CLEARER/RESETER:</h4>
 	<form action='clearallblog.php' method='GET' id="newpost">
 	<h4> it is recommended to do this atleast once in a while, or if you messed up your blogpostlist.php file</h4><br/>

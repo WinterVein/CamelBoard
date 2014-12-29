@@ -1,12 +1,18 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-
-<title>CamelBoard</title> 
+<title>CamelBoard</title>
 <link rel="stylesheet" type="text/css" href="assets/bootstrap-3.1.1-dist/css/bootstrap.css" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body bgcolor="#33CC33">
+<script>
+function getUrl(){
+var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
+for(var i = 0; i < hashParams.length; i++){
+    var p = hashParams[i].split('=');
+    document.getElementById(p[0]).value = decodeURIComponent(p[1]);;
+}}</script>
+<Body onload="getUrl()">
 <div class="container">
 <div class="row">
 
@@ -14,15 +20,16 @@
 </div>
 <style type="text/css">
   
+  .chanbody { background:#CCFF66;}
+body { background:#DBFF94;}
+.tabbody { background:#CCFFCC;}
+  
 .large {
     color: #1F1F1F;
     font-family:arial;
     font-size: 4pt;
     width:50%;
 }
-.chanbody { background:#CCFF66;}
-body { background:#DBFF94;}
-.tabbody { background:#CCFFCC;}
 .link {
     color: #1F1F1F;
     font-family:arial;
@@ -40,9 +47,10 @@ body { background:#DBFF94;}
            border-width:0px;
 		   }
 </style>
+
 <center><h1>CamelBoard</h1>
 
-<p><div class="tabbody">
+<p>
 <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
   <div class="container">
   
@@ -83,22 +91,20 @@ body { background:#DBFF94;}
       </ul>
     </nav>
   </div>
-</header></div>
+</header>
 </center>
 <p>
+<br>
+<br>
+<br>
 <center>
-<div class="large">
-<br>
-<br>
-<br>
-<pre class="chanbody">
-<h4>Blog</h4> 
-<a href="replies.html">MessageBoard</a><P>
-<iframe class="content" height="600" width="100%" src="blogpostlist.php">
-</pre>
-</div>
-
-
+<div class="large" width="100%" >
+<pre class="chanbody"> <form action="validate.php" method="post">
+Complete Captcha To Enter Comment
+<input name="captcha" type="text">
+<img src="captcha.php" /><br>
+<input name="submit" type="submit" value="Submit">
+</form>
 </center>
 
 </body>

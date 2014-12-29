@@ -10,19 +10,15 @@ session_start();
 if(isset($_POST["captcha"])&&$_POST["captcha"]!=""&&$_SESSION["code"]==$_POST["captcha"])
 {
 ?>
+<!DOCTYPE html>
 <html>
 <head>
-<title>CamelBoard</title>
+
+<title>CamelBoard</title> 
 <link rel="stylesheet" type="text/css" href="assets/bootstrap-3.1.1-dist/css/bootstrap.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<script>
-function getUrl(){
-var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
-for(var i = 0; i < hashParams.length; i++){
-    var p = hashParams[i].split('=');
-    document.getElementById(p[0]).value = decodeURIComponent(p[1]);;
-}}</script>
-<Body onload="getUrl()">
+<body bgcolor="#33CC33">
 <div class="container">
 <div class="row">
 
@@ -36,6 +32,9 @@ for(var i = 0; i < hashParams.length; i++){
     font-size: 4pt;
     width:50%;
 }
+.chanbody { background:#CCFF66;}
+body { background:#DBFF94;}
+.tabbody { background:#CCFFCC;}
 .link {
     color: #1F1F1F;
     font-family:arial;
@@ -51,25 +50,60 @@ for(var i = 0; i < hashParams.length; i++){
  .content {
            border-style:none;
            border-width:0px;
-		   }
+       }
 </style>
-<center>
-<a href="http://wintervein.github.io/CamelBoard/">click here to view to the CamelBoard project</a> <P><a href="config.php">admin control panel(write blogposts here)</a>
-</center>
-<center>
-<a href="index.html"><img src="assets/images/logo.png" width="20%" height="15%"/></a>
+<center><h1>CamelBoard</h1>
+
+<p><div class="tabbody">
+<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+  <div class="container">
+  
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+         
+        <li>
+          <a href=""></a>
+        </li>
+       
+        
+     <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="" class="navbar-brand">CamelBoard</a>
+    </div>
+    <li>
+          <a href="index.html">Blog</a>
+        </li>
+    
+        <li>
+          <a href="replies.html">MessageBoard</a>
+        </li>
+    <li>
+          
+        </li>
+     <li>
+          
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://wintervein.github.io/CamelBoard/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');">The CamelBoard Project</a></li>
+        <li><a href="config.php" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">Admin Panel</a></li>
+      </ul>
+    </nav>
+  </div>
+</header></div>
 </center>
 <p>
-
-<center> <div class="mainmenu"><a href="index.html"><img src="assets/images/homeNS.png" width="100%"/></a></div>    <div class="mainmenu"><a href="replies.html"><img src="assets/images/msgboardS.png" width="100%"/></a></div></center>
-
-<p>
 <center>
-<div class="large" width="100%" >
-<pre>
-
-<h4>Welcome to CamelBoard MessageBoard!</h4>
-<a href="index.html">Admin Posts</a>
+<div class="large">
+<br>
+<br>
+<br>
+<pre class="chanbody">
 <script language="javascript" type="text/javascript">
 function limitText(limitField, limitCount, limitNum) {
 	if (limitField.value.length > limitNum) {
@@ -97,7 +131,7 @@ onKeyUp="limitText(this.form.comment,this.form.countdown,1000);"></textarea>
     </form></div>
 <iframe class="content" height="600" width="100%" src="replypostlist.php">
 </pre>
-<?
+<?php
 }
 else
 {
