@@ -1,6 +1,34 @@
 <head>
 <link rel="stylesheet" type="text/css" href="assets/bootstrap-3.1.1-dist/css/bootstrap.css" />
 </head>
+<style type="text/css">
+  
+.large {
+    color: #1F1F1F;
+    font-family:arial;
+    font-size: 4pt;
+    width:50%;
+}
+.chanbody { background:#CCFF66;}
+body { background:#DBFF94;}
+.tabbody { background:#CCFFCC;}
+.link {
+    color: #1F1F1F;
+    font-family:arial;
+    font-size: 4pt;
+    width:30%;
+} 
+.mainmenu {
+           width: 8%;
+           height: 7%;
+           border-style:inset;
+           border-width:5px;
+ }
+ .content {
+           border-style:none;
+           border-width:0px;
+       }
+</style>
 <?php 
 require("pass.php");
 $password = $passwerd;  //(CaSe-SeNsItIvE!) CHANGE THIS TO WHATEVER YOU WANT OR ELSE YOU WILL BE HACKED!!!
@@ -11,7 +39,7 @@ if (isset($_POST["password"]) && ($_POST["password"]=="$password")) {
  print "<h2 align=\"center\">Restricted Area!</h2>";
 // If password is valid let the user get access
 
-$auth = $_GET['author'];
+$author = $_GET['author'];
 
 
 $meta = "<?php \n \$author=\"";
@@ -19,7 +47,7 @@ $metae = "\";\n?>";
 
 $file_handle = fopen("author.php", "w+");
 //$old_content = file_get_contents("blogpostlist.html");
-$file_contents = $meta . $auth . $metae;
+$file_contents = $meta . $author . $metae;
 
 fwrite($file_handle, $file_contents);
 fclose($file_handle);

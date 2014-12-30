@@ -1,3 +1,34 @@
+<head>
+<link rel="stylesheet" type="text/css" href="assets/bootstrap-3.1.1-dist/css/bootstrap.css" />
+</head>
+<style type="text/css">
+  
+.large {
+    color: #1F1F1F;
+    font-family:arial;
+    font-size: 4pt;
+    width:50%;
+}
+.chanbody { background:#CCFF66;}
+body { background:#DBFF94;}
+.tabbody { background:#CCFFCC;}
+.link {
+    color: #1F1F1F;
+    font-family:arial;
+    font-size: 4pt;
+    width:30%;
+} 
+.mainmenu {
+           width: 8%;
+           height: 7%;
+           border-style:inset;
+           border-width:5px;
+ }
+ .content {
+           border-style:none;
+           border-width:0px;
+       }
+</style>
 <?php
 /************************************************************************/
 /* PHP Simple PasswordProtect v1.0                                      */
@@ -69,7 +100,37 @@ body { background:#DBFF94;}
 ";
 fwrite($file_handle, $file_contents);
 fclose($file_handle);
-echo "success! <a href=\"config.php\">go back to control panel</a>";
+echo "<head>
+<link rel=\"stylesheet\" type=\"text/css\" href=\"assets/bootstrap-3.1.1-dist/css/bootstrap.css\" />
+</head>
+<style type=\"text/css\">
+  
+.large {
+    color: #1F1F1F;
+    font-family:arial;
+    font-size: 4pt;
+    width:50%;
+}
+.chanbody { background:#CCFF66;}
+body { background:#DBFF94;}
+.tabbody { background:#CCFFCC;}
+.link {
+    color: #1F1F1F;
+    font-family:arial;
+    font-size: 4pt;
+    width:30%;
+} 
+.mainmenu {
+           width: 8%;
+           height: 7%;
+           border-style:inset;
+           border-width:5px;
+ }
+ .content {
+           border-style:none;
+           border-width:0px;
+       }
+</style> success! <a href=\"config.php\">go back to control panel</a>";
 
 }
 else
