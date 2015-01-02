@@ -53,7 +53,7 @@ print $sitename;
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="" class="navbar-brand"><?php
+      <a href="index.php" class="navbar-brand"><?php
 print $sitename;
 ?></a>
     </div>
