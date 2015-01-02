@@ -25,7 +25,6 @@ NOTE:
 
 Libraries used:
 -bootstrap
--ace editor
 
 IMPORTANT:
 *FOLLOW THE README IN ORDER TO CONFIGURE YOUR MessageBoard!
@@ -45,25 +44,12 @@ id="yourreplyid", and then counting which line it is on)
  or you can simply open it in a text editor and view it's line and delete it.
 you can open 
 
-3(optional).You can change the site logo!
 
--To do this you can simply replace assets/images/logo.png with your own file(but rename your file to 
-
-"logo.png")
-
-4(optional). change where it says Welcome to CamelBoard Comments! to your own message.
-
--To do this, open up replies.html and/or index.html and scroll down to line 52(50 for 
-
-index.html) where it says: Welcome to CamelBoard comments/home!  Then just simply 
-
-replace that with your Own Message.
-
-5(optional). Change the title of the page.
+3(optional). Change the title of the page.
 - To do this simply open up replies.html and/or index.html and change the text between
 the <title> tags at the top of the page
 
-6(optional). MODIFY ANYTHING YOU WANT! including but not limited to:css style, php scripts,
+4(optional). MODIFY ANYTHING YOU WANT! including but not limited to:css style, php scripts,
 background color, and more!
 
 
