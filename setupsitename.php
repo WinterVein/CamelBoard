@@ -31,7 +31,6 @@ body { background:#DBFF94;}
 </style>
 <?php 
 require("pass.php");
-
 $password = $passwerd;  //(CaSe-SeNsItIvE!) CHANGE THIS TO WHATEVER YOU WANT OR ELSE YOU WILL BE HACKED!!!
  print "<h2 align=\"center\">Restricted Area!</h2>";
 // If password is valid let the user get access
@@ -40,20 +39,21 @@ if (isset($_POST["password"]) && ($_POST["password"]=="$password")) {
  print "<h2 align=\"center\">Restricted Area!</h2>";
 // If password is valid let the user get access
 
-$timezone = $_GET['timezone'];
-$timezonefix = strip_tags($timezone);
+$sitename = $_GET['sitename'];
 
-$meta = "<?php \n date_default_timezone_set(\"";
-$metae = "\");\n?>";
 
-$file_handle = fopen("timezone.php", "w+");
+$meta = "<?php \n \$sitename=\"";
+$metae = "\";\n?>";
+
+$file_handle = fopen("sitename.php", "w+");
 //$old_content = file_get_contents("blogpostlist.html");
-$file_contents = $meta . $timezonefix . $metae;
+$file_contents = $meta . $sitename . $metae;
 
 fwrite($file_handle, $file_contents);
 fclose($file_handle);
-print "Done, you can view your timezone by opening up timezone.php in a text editor. your timezone is:" . $timezonefix;
-echo "<a href=\"index.html\">click here to go back to the main site home</a> <P><a href=\"config.php\">click here to go back to the control panel</a>";
+print "Done,your discussion board name is " . $sitename;
+echo "<a href=\"config.php\">click here to go back to control panel</a>";
+
 //unlink(__FILE__)
 }
 

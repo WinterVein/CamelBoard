@@ -1,6 +1,34 @@
 <head>
 <link rel="stylesheet" type="text/css" href="assets/bootstrap-3.1.1-dist/css/bootstrap.css" />
 </head>
+<style type="text/css">
+  
+.large {
+    color: #1F1F1F;
+    font-family:arial;
+    font-size: 4pt;
+    width:50%;
+}
+.chanbody { background:#CCFF66;}
+body { background:#DBFF94;}
+.tabbody { background:#CCFFCC;}
+.link {
+    color: #1F1F1F;
+    font-family:arial;
+    font-size: 4pt;
+    width:30%;
+} 
+.mainmenu {
+           width: 8%;
+           height: 7%;
+           border-style:inset;
+           border-width:5px;
+ }
+ .content {
+           border-style:none;
+           border-width:0px;
+       }
+</style>
 <?php 
 require("pass.php");
 $password = $passwerd;  //(CaSe-SeNsItIvE!) CHANGE THIS TO WHATEVER YOU WANT OR ELSE YOU WILL BE HACKED!!!
@@ -35,7 +63,7 @@ else
 if (isset($_POST['password']) || $password == "") {
   print "<p align=\"center\"><font color=\"red\"><b>Incorrect Password</b><br>Please enter the correct password</font></p>";}
   print "<form method=\"post\"><p align=\"center\">Please enter your password for access<br>";
-  print "<input name=\"password\" type=\"password\" size=\"25\" maxlength=\"10\"><input value=\"Login\" type=\"submit\"></p></form>";
+  print "<input name=\"password\" type=\"password\" size=\"25\" ><input value=\"Login\" type=\"submit\"></p></form>";
 }
   print "<br><br><p align=\"center\"></a></p>";
 ?>

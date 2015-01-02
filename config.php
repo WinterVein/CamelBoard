@@ -29,7 +29,56 @@ body { background:#DBFF94;}
            border-width:0px;
        }
 </style>
+<center><h1><?php
+require ("sitename.php");
+print $sitename;
+?></h1>
 
+<p><div class="tabbody">
+<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+  <div class="container">
+  
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+         
+        <li>
+          <a href="index.php"></a>
+        </li>
+       
+        
+     <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="" class="navbar-brand"><?php
+print $sitename;
+?></a>
+    </div>
+    <li>
+          <a href="index.php">Blog</a>
+        </li>
+    
+        <li>
+          <a href="replies.php">MessageBoard</a>
+        </li>
+    <li>
+          
+        </li>
+     <li>
+          
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://wintervein.github.io/CamelBoard/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');">The CamelBoard Project</a></li>
+        <li><a href="config.php" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">Admin Panel</a></li>
+      </ul>
+    </nav>
+  </div>
+</header></div>
+</center>
 <?php
 /************************************************************************/
 /* PHP Simple PasswordProtect v1.0                                      */
@@ -46,9 +95,12 @@ require("pass.php");
 $password = $passwerd;  //(CaSe-SeNsItIvE!) CHANGE THIS TO WHATEVER YOU WANT OR ELSE YOU WILL BE HACKED!!!
 
 ##########################################################################
+
 ?>
 <html>
-<head><title>CamelBoard config</title>
+<head><title><?php
+print $sitename; 
+?>config</title>
 <link rel="stylesheet" type="text/css" href="assets/bootstrap-3.1.1-dist/css/bootstrap.css" />
 </head>
 <style type="text/css">
@@ -88,6 +140,7 @@ if (isset($_POST["password"]) && ($_POST["password"]=="$password")) {
 ?>
 
 
+  
     <form action='setuppass.php' method='GET' id="newpost">
 	<script type="text/JavaScript">
 function valid(f) {
@@ -95,10 +148,11 @@ function valid(f) {
 } 
 </script><pre class="chanbody"> <h4> SECTIONS:</h4>
 <a href="#pwc">-PASSWORD CONFIGURATION</a>
-<a href="#auth">-BLOG AUTHOR NAME CONFIGURATION</a>
+<a href="#author">-BLOG AUTHOR NAME CONFIGURATION</a>
+<a href="#sn">-BLOG/DISCUSSION BOARD NAME CONFIGURATION</a>
 <a href="#tzc">-TIMEZONE CONFIGURATION</a>
 <a href="#bp">-BLOG POSTING</a>
-<a href="#cd">-COMMENT DELETING</a>
+<a href="#cd">-THREAD DELETING</a>
 <a href="#bd">-BLOGPOST DELETING</a>
 <a href="#clear">-clearing messageboard of posts</a>
 <a href="#clearblog">-clearing blog of posts</a>
@@ -106,18 +160,27 @@ function valid(f) {
 <div id="pwc">
 <pre class="chanbody">
 <h3> PASSWORD CONFIGURATION(VERY IMPORTANT, DO THIS FIRST!):</h3>
-       your password for posting stuff to blog and administration (NO SPECIAL CHARACTERS,ALL SPECIAL CHARACTERS WILL BE STRIPPED FROM THE PASSWORD ONLY NUMBERS AND LETTERS):<P> <input type='text' name='pass' onkeyup="valid(this)" onblur="valid(this)"/> <P> this can only be viewed by site admin via opening pass.php in a text editor.
+       your password for posting stuff to blog and administration(NO SPECIAL CHARACTERS,  NUMBERS AND LETTERS ONLY,):<P> <input type='text' name='pass' onkeyup="valid(this)"  onblur="valid(this)"/> <P> this can only be viewed by site admin via opening pass.php in a text editor.
         <input type='submit' value='SUBMIT'/>
 		NOTE: if special characters are injected into the textbox the password script will be broken.
     </form></pre></div>
-<div id="auth">
+<div id="author">
 <pre class="chanbody">
 <h4> Blog author name (important):</h4>
 <form action='setupauthor.php' method='GET' id="newpost">
-       your name or alias:(NO SPECIAL CHARACTERS,ALL SPECIAL CHARACTERS WILL BE STRIPPED FROM THE PASSWORD ONLY NUMBERS AND LETTERS):<P> <input type='text' name='author' onkeyup="valid(this)" onblur="valid(this)"/><p>
+       your name or alias(NO SPECIAL CHARACTERS,  NUMBERS AND LETTERS ONLY):<P> <input type='text' name='author' onkeyup="valid(this)" onblur="valid(this)"/><p>
         <input type='submit' value='SUBMIT'/>
 		NOTE: if special characters are injected into the textbox the naming script will be broken.
-    </form></pre></div><div id="tzc"><pre class="chanbody">
+    </form></pre></div>
+    <div id="sn">
+<pre class="chanbody">
+<h4> Blog/Discussion board name (important):</h4>
+<form action='setupsitename.php' method='GET' id="newpost">
+       your discussionboard/blog name(NO SPECIAL CHARACTERS,  NUMBERS AND LETTERS ONLY):<P> <input type='text' name='sitename' onkeyup="valid(this)" onblur="valid(this)"/><p>
+        <input type='submit' value='SUBMIT'/>
+    NOTE: if special characters are injected into the textbox the naming script will be broken.
+    </form></pre></div>
+    <div id="tzc"><pre class="chanbody">
 	<P><P><h4>TIMEZONE CONFIGURATION:</h4>
 	<form action='setuptime.php' method='GET' id="newpost">
        your timezone:
@@ -274,7 +337,7 @@ else
 if (isset($_POST['password']) || $password == "") {
   print "<p align=\"center\"><font color=\"red\"><b>Incorrect Password</b><br>Please enter the correct password</font></p>";}
   print "<form method=\"post\"><p align=\"center\">Please enter your password for access<br>";
-  print "<input name=\"password\" type=\"password\" size=\"25\" maxlength=\"10\"><input value=\"Login\" type=\"submit\"></p></form>";
+  print "<input name=\"password\" type=\"password\" size=\"25\" ><input value=\"Login\" type=\"submit\"></p></form>";
 }
   print "<br><br><p align=\"center\"></a></p>";
 ?>

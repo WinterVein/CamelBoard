@@ -120,7 +120,7 @@ fclose(\$file_handle);
 fwrite($file_handle, $file_contents);
 fclose($file_handle);
 
-print "Done! :) <a href=\"index.html\">click here to go back to home</a><P><a href=\"blogpostlist.html\">click here to go back to site home</a><P><a href=\"config.php\">click here to view content list</a>";
+print "Done! :) <a href=\"index.php\">click here to go back to home</a><P><a href=\"blogpostlist.php\">click here to go back to site home</a><P><a href=\"config.php\">click here to view content list</a>";
 
 }
 
@@ -130,7 +130,7 @@ else
 if (isset($_POST['password']) || $password == "") {
   print "<p align=\"center\"><font color=\"red\"><b>Incorrect Password</b><br>Please enter the correct password</font></p>";}
   print "<form method=\"post\"><p align=\"center\">Please enter your password for access<br>";
-  print "<input name=\"password\" type=\"password\" size=\"25\" maxlength=\"10\"><input value=\"Login\" type=\"submit\"></p></form>";
+  print "<input name=\"password\" type=\"password\" size=\"25\" ><input value=\"Login\" type=\"submit\"></p></form>";
 }
   print "<br><br><p align=\"center\"></a></p>";
 ?>
