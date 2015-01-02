@@ -50,7 +50,15 @@ body { background:#DBFF94;}
  .content {
            border-style:none;
            border-width:0px;
+
        }
+  table, th, td {
+    border: 1px solid #009900;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+   }
 </style>
 <center><h1>CamelBoard</h1>
 
@@ -115,20 +123,43 @@ function limitText(limitField, limitCount, limitNum) {
 
 
 </script>
-    <form action='respscript.php' method='GET' id="newpost">
-	<font size="2">
-        replyid(copy and paste replyid of the comment you want to reply to): <input type='text' name='replyto' id='replyto'/>
-		SUB-replyid(copy and paste replyid of the sub-comment you want to reply to): <input type='text' name='srt' id='srt'/>
-        title(maxlength:50): <input type='text' name='title' onKeyDown="limitText(this.form.title,this.form.countdown,50);" 
-onKeyUp="limitText(this.form.title,this.form.countdown,50);" maxlength="50"/>
-		username(maxlength:20): <input type='text' name='uname' onKeyDown="limitText(this.form.uname,this.form.countdown,20);" 
-onKeyUp="limitText(this.form.uname,this.form.countdown,20);" maxlength="20"/>
-		Image(use full path and if the image is on the web include the http:// prefix) : <input type='text' name='img'/>
-		comment(maxlength:1000) :<P> <textarea name='comment' rows="5" cols="50" form="newpost" onKeyDown="limitText(this.form.comment,this.form.countdown,1000);" 
+  <form action='respscript.php' method='GET' id="newpost">
+  <font size="2">
+<table style="width:100%">
+  <caption>Submit your Thread</caption>
+  <tr>
+    <td>replyid(replyid of the thread you want to reply to): </td>
+    <td><input type='text' name='replyto' id='replyto'/></td>
+  </tr>
+  <tr>
+    <td>SUB-replyid</br>(sub-replyid of comment, </br>also enter the replyid of thread): </td>
+    <td><input type='text' name='srt' id='srt'/></td>
+  </tr>
+  <tr>
+    <td>title(maxlength:50):</td>
+    <td>  <input type='text' name='title' onKeyDown="limitText(this.form.title,this.form.countdown,50);" 
+onKeyUp="limitText(this.form.title,this.form.countdown,50);" maxlength="50"/></td>
+  </tr>
+  <tr>
+    <td>username(maxlength:20):</td>
+      <td><input type='text' name='uname' onKeyDown="limitText(this.form.uname,this.form.countdown,20);" 
+onKeyUp="limitText(this.form.uname,this.form.countdown,20);" maxlength="20"/></td>
+  </tr>
+  <tr>
+<td>Image(include the http:// prefix) :</td>
+<td><input type='text' name='img'/></td>
+  </tr>
+  <tr>
+    <td>comment(maxlength:1000) :</td>
+      <td><P> <textarea name='comment' rows="5" cols="50" form="newpost" onKeyDown="limitText(this.form.comment,this.form.countdown,1000);" 
 onKeyUp="limitText(this.form.comment,this.form.countdown,1000);"></textarea>
-		
-        <input type='submit' value='SUBMIT'/>
-    </form></div>
+    </td>
+  </tr>
+  
+    
+</table>
+  <input type='submit' value='SUBMIT'/>
+  </form></div>
 <iframe class="content" height="600" width="100%" src="replypostlist.php">
 </pre>
 <?php
