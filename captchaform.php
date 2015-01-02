@@ -73,13 +73,6 @@ print $sitename;
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-<<<<<<< HEAD
-      <a href="index.php" class="navbar-brand"><?php
-print $sitename;
-?></a>
-    </div>
-    <li>
-=======
 
       <a href="index.php" class="navbar-brand"><?php
 print $sitename;
@@ -87,12 +80,6 @@ print $sitename;
     </div>
     <li>
 
-      <a href="" class="navbar-brand"><?php
-print $sitename;
-?></a>
-    </div>
-		<li>
->>>>>>> origin/master
           <a href="index.php">Blog</a>
         </li>
     

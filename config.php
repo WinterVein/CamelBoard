@@ -166,11 +166,9 @@ function valid(f) {
 <div id="pwc">
 <pre class="chanbody">
 <h3> PASSWORD CONFIGURATION(VERY IMPORTANT, DO THIS FIRST!):</h3>
-<<<<<<< HEAD
-       your password for posting stuff to blog and administration(NO SPECIAL CHARACTERS,  NUMBERS AND LETTERS ONLY,):<P> <input type='text' name='pass' onkeyup="valid(this)"  onblur="valid(this)"/> <P> this can only be viewed by site admin via opening pass.php in a text editor.
-=======
+
        your password for posting stuff to blog and administration(NO SPECIAL CHARACTERS,  NUMBERS AND LETTERS ONLY):<P> <input type='text' name='pass' onkeyup="valid(this)" onblur="valid(this)"/> <P> this can only be viewed by site admin via opening pass.php in a text editor.
->>>>>>> origin/master
+
         <input type='submit' value='SUBMIT'/>
 		NOTE: if special characters are injected into the textbox the password script will be broken.
     </form></pre></div>
