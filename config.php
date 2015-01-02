@@ -43,12 +43,6 @@ print $sitename;
          
         <li>
           <a href="index.php"></a>
-<<<<<<< HEAD
-=======
-
-          <a href=""></a>
-
->>>>>>> origin/master
         </li>
        
         
