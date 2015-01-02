@@ -42,7 +42,11 @@ print $sitename;
       <ul class="nav navbar-nav">
          
         <li>
+<<<<<<< HEAD
           <a href="index.php"></a>
+=======
+          <a href=""></a>
+>>>>>>> origin/master
         </li>
        
         
