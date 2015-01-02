@@ -63,7 +63,11 @@ else
 if (isset($_POST['password']) || $password == "") {
   print "<p align=\"center\"><font color=\"red\"><b>Incorrect Password</b><br>Please enter the correct password</font></p>";}
   print "<form method=\"post\"><p align=\"center\">Please enter your password for access<br>";
+<<<<<<< HEAD
   print "<input name=\"password\" type=\"password\" size=\"25\" ><input value=\"Login\" type=\"submit\"></p></form>";
+=======
+  print "<input name=\"password\" type=\"password\" size=\"25\" maxlength=\"10\"><input value=\"Login\" type=\"submit\"></p></form>";
+>>>>>>> origin/master
 }
   print "<br><br><p align=\"center\"></a></p>";
 ?>
