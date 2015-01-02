@@ -1,21 +1,15 @@
-
 <!DOCTYPE html>
 <html>
 <head>
+
 <title><?php
 require("sitename.php");
 print $sitename;
-?></title>
+?></title> 
 <link rel="stylesheet" type="text/css" href="assets/bootstrap-3.1.1-dist/css/bootstrap.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<script>
-function getUrl(){
-var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
-for(var i = 0; i < hashParams.length; i++){
-    var p = hashParams[i].split('=');
-    document.getElementById(p[0]).value = decodeURIComponent(p[1]);;
-}}</script>
-<Body onload="getUrl()">
+<body bgcolor="#33CC33">
 <div class="container">
 <div class="row">
 
@@ -23,16 +17,15 @@ for(var i = 0; i < hashParams.length; i++){
 </div>
 <style type="text/css">
   
-  .chanbody { background:#CCFF66;}
-body { background:#DBFF94;}
-.tabbody { background:#CCFFCC;}
-  
 .large {
     color: #1F1F1F;
     font-family:arial;
     font-size: 4pt;
     width:50%;
 }
+.chanbody { background:#CCFF66;}
+body { background:#DBFF94;}
+.tabbody { background:#CCFFCC;}
 .link {
     color: #1F1F1F;
     font-family:arial;
@@ -48,14 +41,13 @@ body { background:#DBFF94;}
  .content {
            border-style:none;
            border-width:0px;
-		   }
+       }
 </style>
-
 <center><h1><?php
 print $sitename;
 ?></h1>
 
-<p>
+<p><div class="tabbody">
 <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
   <div class="container">
   
@@ -67,7 +59,7 @@ print $sitename;
         </li>
        
         
-		 <div class="navbar-header">
+     <div class="navbar-header">
       <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -78,17 +70,17 @@ print $sitename;
 print $sitename;
 ?></a>
     </div>
-		<li>
+    <li>
           <a href="index.php">Blog</a>
         </li>
-		
+    
         <li>
           <a href="replies.php">MessageBoard</a>
         </li>
-		<li>
+    <li>
           
         </li>
-		 <li>
+     <li>
           
         </li>
       </ul>
@@ -98,20 +90,26 @@ print $sitename;
       </ul>
     </nav>
   </div>
-</header>
+</header></div>
 </center>
 <p>
-<br>
-<br>
-<br>
 <center>
-<div class="large" width="100%" >
-<pre class="chanbody"> <form action="validate.php" method="post">
-Complete Captcha To Enter Comment
-<input name="captcha" type="text">
-<img src="captcha.php" /><br>
-<input name="submit" type="submit" value="Submit">
-</form>
+<div class="large">
+<br>
+<br>
+<br>
+<pre class="chanbody">
+
+<h4>MessageBoard</h4>
+<a href="index.php">Blog Posts</a>
+
+<div height="20%" width="100%">
+<a class="btn btn-default" href="captchaform.php" role="button">submit a comment</a>
+<P>
+<iframe class="content" height="600" width="100%" src="replypostlist.php">
+</div>
+
+
 </center>
 
 </body>

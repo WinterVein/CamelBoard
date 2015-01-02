@@ -68,7 +68,7 @@ else{
 
 	print "Done! :)<head>
 	<script type=\"text/javascript\">
-   window.location=\"replies.html\";
+   window.location=\"replies.php\";
 	</script>
 	</head>";
 	}
@@ -89,7 +89,7 @@ else if(strlen($fixreplyid) > 0)
 
 	print "Done! :)<head>
 	<script type=\"text/javascript\">
-	window.location=\"replies.html\";
+	window.location=\"replies.php\";
 	</script>
 	</head>";
 }
@@ -130,7 +130,7 @@ fclose($file_handle);
 
 print "Done! :)<head>
 <script type=\"text/javascript\">
-   window.location=\"replies.html\";
+   window.location=\"replies.php\";
 </script>
 </head>";
 }

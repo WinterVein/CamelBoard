@@ -39,19 +39,19 @@ if (isset($_POST["password"]) && ($_POST["password"]=="$password")) {
  print "<h2 align=\"center\">Restricted Area!</h2>";
 // If password is valid let the user get access
 
-$pass = $_GET['pass'];
+$sitename = $_GET['sitename'];
 
 
-$meta = "<?php \n \$passwerd=\"";
+$meta = "<?php \n \$sitename=\"";
 $metae = "\";\n?>";
 
-$file_handle = fopen("pass.php", "w+");
+$file_handle = fopen("sitename.php", "w+");
 //$old_content = file_get_contents("blogpostlist.html");
-$file_contents = $meta . $pass . $metae;
+$file_contents = $meta . $sitename . $metae;
 
 fwrite($file_handle, $file_contents);
 fclose($file_handle);
-print "Done, you can view your password by opening pass.php in a text editor. your password is: " . $pass . " DONT FORGET!";
+print "Done,your discussion board name is " . $sitename;
 echo "<a href=\"config.php\">click here to go back to control panel</a>";
 
 //unlink(__FILE__)
