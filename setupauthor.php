@@ -51,7 +51,7 @@ $file_contents = $meta . $author . $metae;
 
 fwrite($file_handle, $file_contents);
 fclose($file_handle);
-print "Done,your name is" . $author;
+print "Done,your name is " . $author;
 echo "<a href=\"config.php\">click here to go back to control panel</a>";
 
 //unlink(__FILE__)

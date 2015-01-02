@@ -14,7 +14,10 @@ if(isset($_POST["captcha"])&&$_POST["captcha"]!=""&&$_SESSION["code"]==$_POST["c
 <html>
 <head>
 
-<title>CamelBoard</title> 
+<title><?php
+require("sitename.php");
+print $sitename;
+?></title> 
 <link rel="stylesheet" type="text/css" href="assets/bootstrap-3.1.1-dist/css/bootstrap.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -60,7 +63,9 @@ th, td {
     padding: 5px;
    }
 </style>
-<center><h1>CamelBoard</h1>
+<center><h1><?php
+print $sitename;
+?></h1>
 
 <p><div class="tabbody">
 <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
@@ -81,14 +86,16 @@ th, td {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="" class="navbar-brand">CamelBoard</a>
+      <a href="" class="navbar-brand"><?php
+print $sitename;
+?></a>
     </div>
     <li>
-          <a href="index.html">Blog</a>
+          <a href="index.php">Blog</a>
         </li>
     
         <li>
-          <a href="replies.html">MessageBoard</a>
+          <a href="replies.php">MessageBoard</a>
         </li>
     <li>
           

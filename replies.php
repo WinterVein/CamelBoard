@@ -2,7 +2,10 @@
 <html>
 <head>
 
-<title>CamelBoard</title> 
+<title><?php
+require("sitename.php");
+print $sitename;
+?></title> 
 <link rel="stylesheet" type="text/css" href="assets/bootstrap-3.1.1-dist/css/bootstrap.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -38,9 +41,11 @@ body { background:#DBFF94;}
  .content {
            border-style:none;
            border-width:0px;
-		   }
+       }
 </style>
-<center><h1>CamelBoard</h1>
+<center><h1><?php
+print $sitename;
+?></h1>
 
 <p><div class="tabbody">
 <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
@@ -54,26 +59,28 @@ body { background:#DBFF94;}
         </li>
        
         
-		 <div class="navbar-header">
+     <div class="navbar-header">
       <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="" class="navbar-brand">CamelBoard</a>
+      <a href="" class="navbar-brand"><?php
+print $sitename;
+?></a>
     </div>
-		<li>
-          <a href="index.html">Blog</a>
+    <li>
+          <a href="index.php">Blog</a>
         </li>
-		
+    
         <li>
-          <a href="replies.html">MessageBoard</a>
+          <a href="replies.php">MessageBoard</a>
         </li>
-		<li>
+    <li>
           
         </li>
-		 <li>
+     <li>
           
         </li>
       </ul>
@@ -92,10 +99,14 @@ body { background:#DBFF94;}
 <br>
 <br>
 <pre class="chanbody">
-<h4>Blog</h4> 
-<a href="replies.html">MessageBoard</a><P>
-<iframe class="content" height="600" width="100%" src="blogpostlist.php">
-</pre>
+
+<h4>MessageBoard</h4>
+<a href="index.php">Blog Posts</a>
+
+<div height="20%" width="100%">
+<a class="btn btn-default" href="captchaform.php" role="button">submit a comment</a>
+<P>
+<iframe class="content" height="600" width="100%" src="replypostlist.php">
 </div>
 
 

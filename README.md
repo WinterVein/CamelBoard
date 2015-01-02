@@ -30,7 +30,7 @@ NOTE:
 
 Libraries used:
 -bootstrap
--ace editor
+
 
 IMPORTANT:
 *FOLLOW THE README IN ORDER TO CONFIGURE YOUR MessageBoard!
@@ -42,31 +42,15 @@ README:
 - To do this you must visit yoursitename.com/config.php in yourbrowser and follow the instructions listed there.
 
 2(optional but useful to know)you can delete posts! 
-
 -To do this, view config.php in your browser, and go to the "delete comments" section,
-you can either count the line of the comment you want to delete and enter it in the text box
- (remember one comment per line, so identify which comment is on which line by looking at 
-id="yourreplyid", and then counting which line it is on)
- or you can simply open it in a text editor and view it's line and delete it.
-you can open 
+and enter the replyid of the thread you want to delete (does not work for Sub-replyid).
+also, you may want to reset the threads and comments every once in a while,
+to do this, navigate to the "THREAD AND COMMENT CLEARER/RESETER" section and click the button.
 
-3(optional).You can change the site logo!
 
--To do this you can simply replace assets/images/logo.png with your own file(but rename your file to 
+3(optional). Change the Blog/discussion board Name.
+- To do this simply open up config.php and navigate to the "Blog/Discussion Board name configuration" section
+and change the name.
 
-"logo.png")
-
-4(optional). change where it says Welcome to CamelBoard Comments! to your own message.
-
--To do this, open up replies.html and/or index.html and scroll down to line 52(50 for 
-
-index.html) where it says: Welcome to CamelBoard comments/home!  Then just simply 
-
-replace that with your Own Message.
-
-5(optional). Change the title of the page.
-- To do this simply open up replies.html and/or index.html and change the text between
-the <title> tags at the top of the page
-
-6(optional). MODIFY ANYTHING YOU WANT! including but not limited to:css style, php scripts,
+4(optional). MODIFY ANYTHING YOU WANT! including but not limited to:css style, php scripts,
 background color, and more!
