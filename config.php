@@ -170,17 +170,16 @@ function valid(f) {
 <pre class="chanbody">
 <h4> Blog author name (important):</h4>
 <form action='setupauthor.php' method='GET' id="newpost">
-       your name or alias(NO SPECIAL CHARACTERS,  NUMBERS AND LETTERS ONLY):<P> <input type='text' name='author' onkeyup="valid(this)" onblur="valid(this)"/><p>
+       your name or alias:<P> <input type='text' name='author' onkeyup="valid(this)" onblur="valid(this)"/><p>
         <input type='submit' value='SUBMIT'/>
-		NOTE: if special characters are injected into the textbox the naming script will be broken.
     </form></pre></div>
     <div id="sn">
 <pre class="chanbody">
 <h4> Blog/Discussion board name (important):</h4>
 <form action='setupsitename.php' method='GET' id="newpost">
-       your discussionboard/blog name(NO SPECIAL CHARACTERS,  NUMBERS AND LETTERS ONLY):<P> <input type='text' name='sitename' onkeyup="valid(this)" onblur="valid(this)"/><p>
+       your discussionboard/blog name:<P> <input type='text' name='sitename'/><p>
         <input type='submit' value='SUBMIT'/>
-    NOTE: if special characters are injected into the textbox the naming script will be broken.
+    
     </form></pre></div>
     <div id="tzc"><pre class="chanbody">
 	<P><P><h4>TIMEZONE CONFIGURATION:</h4>

@@ -39,7 +39,7 @@ if (isset($_POST["password"]) && ($_POST["password"]=="$password")) {
  print "<h2 align=\"center\">Restricted Area!</h2>";
 // If password is valid let the user get access
 
-$sitename = $_GET['sitename'];
+$sitename = htmlentities($_GET['sitename']);
 
 
 $meta = "<?php \n \$sitename=\"";
