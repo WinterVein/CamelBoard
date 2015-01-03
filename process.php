@@ -102,9 +102,16 @@ $metae = "</div></pre></P>";
 $img = $_GET['img'];
 $comment = $_GET['comment'];
 
-$file_handle = fopen("blogposts/" . $title . $date . ".php", "c+");
-$file_contents = $meta . "Title:<font size=\"3\">" . $title . "</font><P>     " . "Date:" . $date . "<br/>Author:" . $author . "<P>postid:" . $title . $date ."<P><img src=\"" . $img . "\"><P>" . "<P> comment:<P>" . $comment . $metae . "\n";
 
+$file_handle = fopen("blogposts/" . $title . $date . ".php", "c+");
+if(strlen($img) > 0)
+{
+  $file_contents = $meta . "Title:<font size=\"3\">" . $title . "</font><P>     " . "Date:" . $date . "<br/>Author:" . $author . "<P>postid:" . $title . $date ."<P><a href=\"" . $img . "\"target=\"_blank\"><img src=\"" . $img . "\" width=\"30%\" height=\"30%\"></a><P>" . $comment . $metae . "\n";
+}
+else
+{
+  $file_contents = $meta . "Title:<font size=\"3\">" . $title . "</font><P>     " . "Date:" . $date . "<br/>Author:" . $author . "<P>postid:" . $title . $date ."<P><P>" . "<P> comment:<P>" . $comment . $metae . "\n";
+}
 fwrite($file_handle, $file_contents);
 fclose($file_handle);
 $file_handle = fopen("blogpostlist.php", "c+");
